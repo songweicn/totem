@@ -85,7 +85,7 @@
         &none         &none         &none             &none           &none     &kp INSERT  &kp HOME        &kp UP_ARROW    &kp END          &kp PAGE_UP
         &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none     &kp CAPS    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_DOWN
 &trans  &none         &none         &none             &none           &none     &kp LC(Y)   &kp LC(V)       &kp LC(C)       &kp LC(X)        &kp LC(Z)      &trans
-                                    &trans            &trans          &trans    &trans      &trans          &trans
+                                    &trans            &trans          &trans    &kp ENTER   &kp BACKSPACE   &kp DELETE
             >;
         };
 
