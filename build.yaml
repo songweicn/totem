@@ -1,8 +1,8 @@
 include:
-  - board: xiao_ble_zmk
+  - board: seeed_xiao_ble
     shield: totem_left
     snippet: studio-rpc-usb-uart
-  - board: xiao_ble_zmk
+  - board: seeed_xiao_ble
     shield: totem_right
-  - board: xiao_ble_zmk
+  - board: seeed_xiao_ble
     shield: settings_reset
