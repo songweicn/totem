@@ -126,10 +126,10 @@
         nav {
             label = "nav";
             bindings = <
-        &none         &none         &tog 4            &tog 1          &none        &kp INSERT  &kp HOME        &kp UP_ARROW    &kp END          &kp PAGE_UP
-        &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none        &kp CAPS    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_DOWN
-&trans  &kp LC(Z)     &kp LC(X)     &kp LC(C)         &kp LC(V)       &kp LC(Y)    &kp LC(Y)   &kp LC(V)       &kp LC(C)       &kp LC(X)        &kp LC(Z)      &trans
-                                    &none             &trans          &none        &kp ENTER   &kp BACKSPACE   &kp DELETE
+        &kp LA(F4)    &none         &kp LS(LA(TAB))   &kp LA(TAB)     &none        &kp PG_UP  &mt LC(BACKSPACE) BACKSPACE  &mt LC(HOME) UP   &mt LC(DEL) DEL  &kp BACKSPACE
+        &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none        &kp PG_DN  &mt HOME LEFT                &mt LC(END) DOWN  &mt END RIGHT    &kp ENTER
+&trans  &kp LC(Z)     &kp LC(X)     &kp LC(C)         &kp LC(V)       &kp LC(Y)    &kp INS    &kp LC(TAB)                  &none             &none            &none          &trans
+                                    &none             &trans          &none        &kp ENTER  &kp BACKSPACE                &kp DELETE
             >;
         };
 
