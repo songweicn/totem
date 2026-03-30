@@ -64,6 +64,41 @@
         };
     };
 
+    macros {
+        PARENTHESIS: PARENTHESIS {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LEFT_PARENTHESIS>,
+                <&macro_tap>,
+                <&kp LPAR &kp RPAR &kp LEFT>;
+
+            label = "PARENTHESIS";
+        };
+
+        BRACKET: BRACKET {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LEFT_BRACKET>,
+                <&macro_press>,
+                <&kp LBKT &kp RBKT &kp LEFT>;
+
+            label = "BRACKET";
+        };
+
+        BRACE: BRACE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LEFT_BRACE>,
+                <&macro_press>,
+                <&kp LBRC &kp RBRC &kp LEFT>;
+
+            label = "BRACE";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
