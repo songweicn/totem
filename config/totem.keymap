@@ -54,7 +54,7 @@
             bindings = <&kp LSHIFT &kp LSHIFT>;
         };
 
-                comma_semi: comma_semi {
+        comma_semi: comma_semi {
             compatible = "zmk,behavior-mod-morph";
             label = "COMMA_SEMI";
             #binding-cells = <0>;
@@ -171,7 +171,7 @@
             bindings = <
        &kp Q            &kp W            &kp F                &kp P         &kp B          &kp J           &kp L           &kp U                 &kp Y             &kp SINGLE_QUOTE
        &hml LEFT_WIN A  &hml LEFT_ALT R  &hml LEFT_CONTROL S  &hml LSHFT T  &kp G          &kp M           &hmr RSHFT N    &hmr RIGHT_CONTROL E  &hmr RIGHT_ALT I  &hmr RIGHT_GUI O
-&to 0  &kp Z            &kp X            &kp C                &kp D         &kp V          &kp K           &kp H           &kp comma_semi        &kp dot_colon     &kp slash_excl         &to 0
+&to 0  &kp Z            &kp X            &kp C                &kp D         &kp V          &kp K           &kp H           &comma_semi           &dot_colon        &slash_excl         &to 0
                                          &lt 0 ESCAPE         &lt 1 SPACE   &lt 4 ENTER    &smart_num 2 2  &magic_shift  &lt 4 DELETE
             >;
         };
