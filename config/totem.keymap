@@ -64,34 +64,19 @@
             layers = <4>;
         };
 
-        PARENTHESIS {
+        lpar {
             bindings = <&kp LPAR>;
             key-positions = <11 12>;
         };
 
-        BRACKET {
+        lbracket {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <22 23>;
         };
 
-        BRACE {
+        lbrace {
             bindings = <&kp LBRC>;
             key-positions = <1 2>;
-        };
-
-        esc {
-            bindings = <&kp ESC>;
-            key-positions = <0 1>;
-        };
-
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <10 11>;
-        };
-
-        cap {
-            bindings = <&kp CAPS>;
-            key-positions = <21 22>;
         };
 
         backspace {
@@ -103,40 +88,20 @@
             bindings = <&kp DEL>;
             key-positions = <8 9>;
         };
-    };
 
-    macros {
-        PARENTHESIS: PARENTHESIS {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp LEFT_PARENTHESIS>,
-                <&macro_tap>,
-                <&kp LPAR &kp RPAR &kp LEFT>;
-
-            label = "PARENTHESIS";
+        rpar {
+            bindings = <&kp RPAR>;
+            key-positions = <11 12 13>;
         };
 
-        BRACKET: BRACKET {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp LEFT_BRACKET>,
-                <&macro_press>,
-                <&kp LBKT &kp RBKT &kp LEFT>;
-
-            label = "BRACKET";
+        rbracket {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <22 23 24>;
         };
 
-        BRACE: BRACE {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp LEFT_BRACE>,
-                <&macro_press>,
-                <&kp LBRC &kp RBRC &kp LEFT>;
-
-            label = "BRACE";
+        rbrace {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <1 2 3>;
         };
     };
 
