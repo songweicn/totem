@@ -107,10 +107,10 @@
         nav {
             label = "nav";
             bindings = <
-       &kp LA(F4)    &none         &kp LA(LS(TAB))   &kp LA(TAB)     &none        &none   &mt LC(BACKSPACE) BACKSPACE  &mt LC(HOME) UP   &mt LC(DEL) DEL  &kp PG_UP
-       &sk LEFT_GUI  &sk LEFT_ALT  &sk LEFT_CONTROL  &sk LEFT_SHIFT  &none        &none   &mt HOME LEFT                &mt LC(END) DOWN  &mt END RIGHT    &kp PG_DN
-&none  &kp LC(Z)     &kp LC(X)     &kp LC(C)         &kp LC(V)       &kp LC(Y)    &none   &kp LC(TAB)                  &none             &none            &none      &none
-                                   &none             &trans          &none        &trans  &trans                       &trans
+       &kp LA(F4)    &none         &kp LA(LS(TAB))   &kp LA(TAB)     &none        &kp INS    &mt LC(BACKSPACE) BACKSPACE  &mt LC(HOME) UP   &mt LC(DEL) DEL  &kp PG_UP
+       &sk LEFT_GUI  &sk LEFT_ALT  &sk LEFT_CONTROL  &sk LEFT_SHIFT  &none        &kp CAPS   &mt HOME LEFT                &mt LC(END) DOWN  &mt END RIGHT    &kp PG_DN
+&none  &kp LC(Z)     &kp LC(X)     &kp LC(C)         &kp LC(V)       &kp LC(Y)    &none      &kp LC(TAB)                  &none             &none            &none      &none
+                                   &none             &trans          &none        &kp ENTER  &kp BACKSPACE                &kp DEL
             >;
         };
 
