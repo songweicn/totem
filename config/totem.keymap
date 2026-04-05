@@ -40,22 +40,12 @@
 
         combo_pgup {
             bindings = <&kp PG_UP>;
-            key-positions = <16 17>;
+            key-positions = <9 19>;
         };
 
         combo_pgdn {
             bindings = <&kp PAGE_DOWN>;
-            key-positions = <18 17>;
-        };
-
-        lpar {
-            bindings = <&kp LPAR>;
-            key-positions = <16 17>;
-        };
-
-        rpar {
-            bindings = <&kp RPAR>;
-            key-positions = <17 18>;
+            key-positions = <19 30>;
         };
 
         enter {
@@ -68,23 +58,13 @@
             key-positions = <30 29>;
         };
 
-        lbkt {
-            bindings = <&kp LBKT>;
-            key-positions = <27 28>;
-        };
-
-        rbkt {
-            bindings = <&kp RBKT>;
-            key-positions = <28 29>;
-        };
-
-        lbrc {
-            bindings = <&kp LBRC>;
+        backspace {
+            bindings = <&kp BACKSPACE>;
             key-positions = <6 7>;
         };
 
-        rbrc {
-            bindings = <&kp RBRC>;
+        del {
+            bindings = <&kp DEL>;
             key-positions = <7 8>;
         };
 
@@ -185,10 +165,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp EXCL   &kp AT    &kp POUND  &kp DLLR   &kp PRCNT    &kp STAR    &kp N7  &kp N8  &kp N9  &kp N0
-        &kp GRAVE  &sk LALT  &sk LCTRL  &sk LSHFT  &kp CARET    &kp MINUS   &kp N4  &kp N5  &kp N6  &kp PLUS
-&trans  &kp TILDE  &kp BSLH  &kp PIPE   &tog 2     &kp AMPS     &kp PERIOD  &kp N1  &kp N2  &kp N3  &kp FSLH  &trans
-                             &trans     &trans     &trans       &trans      &trans  &trans
+        &kp EXCL   &kp AT    &kp POUND  &kp DLLR   &kp PRCNT    &kp STAR   &kp N7  &kp N8      &kp N9  &kp MINUS
+        &kp GRAVE  &sk LALT  &sk LCTRL  &sk LSHFT  &kp CARET    &kp SEMI   &kp N4  &kp N5      &kp N6  &kp PLUS
+&trans  &kp TILDE  &kp BSLH  &kp PIPE   &tog 2     &kp AMPS     &kp UNDER  &kp N1  &kp N2      &kp N3  &kp FSLH   &trans
+                             &trans     &trans     &trans       &trans     &kp N0  &kp PERIOD
             >;
         };
 
