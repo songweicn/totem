@@ -92,6 +92,26 @@
             bindings = <&to 0>;
             key-positions = <20 31>;
         };
+
+        up {
+            bindings = <&kp UP>;
+            key-positions = <7 17>;
+        };
+
+        down {
+            bindings = <&kp DOWN>;
+            key-positions = <17 28>;
+        };
+
+        left {
+            bindings = <&kp LEFT>;
+            key-positions = <17 16>;
+        };
+
+        right {
+            bindings = <&kp RIGHT>;
+            key-positions = <17 18>;
+        };
     };
 
     keymap {
@@ -116,10 +136,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-          &kp Q  &kp W           &kp F             &kp P        &kp B          &kp J        &kp L            &kp U         &kp Y            &kp SINGLE_QUOTE
-          &kp A  &mt LEFT_ALT R  &mt LEFT_SHIFT S  &mt LCTRL T  &kp G          &kp M        &mt RCTRL N      &mt RSHIFT E  &mt RIGHT_ALT I  &kp O
-&kp LWIN  &kp Z  &kp X           &kp C             &kp D        &kp V          &kp K        &kp H            &kp COMMA     &kp DOT          &kp SLASH         &kp SEMI
-                                 &mo 4             &lt 1 SPACE  &lt 2 ENTER    &lt 2 ENTER  &lt 1 BACKSPACE  &lt 3 DELETE
+          &kp Q  &kp W           &kp F        &kp P        &kp B          &kp J        &kp L            &kp U         &kp Y            &kp SINGLE_QUOTE
+          &kp A  &mt LEFT_ALT R  &mt LCTRL S  &mt LSHFT T  &kp G          &kp M        &mt RSHFT N      &mt RCTRL E   &mt RIGHT_ALT I  &kp O
+&kp LWIN  &kp Z  &kp X           &kp C        &kp D        &kp V          &kp K        &kp H            &kp COMMA     &kp DOT          &kp SLASH         &kp SEMI
+                                 &mo 4        &lt 1 SPACE  &lt 2 ENTER    &lt 2 ENTER  &lt 1 BACKSPACE  &lt 3 DELETE
             >;
         };
 
@@ -150,10 +170,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp EXCL   &kp AT    &kp POUND   &kp DLLR   &kp PRCNT    &kp STAR    &kp N7  &kp N8  &kp N9  &kp N0
-        &kp GRAVE  &sk LALT  &sk LSHIFT  &sk LCTRL  &kp CARET    &kp MINUS   &kp N4  &kp N5  &kp N6  &kp PLUS
-&trans  &kp TILDE  &kp BSLH  &kp PIPE    &tog 2     &kp AMPS     &kp PERIOD  &kp N1  &kp N2  &kp N3  &kp FSLH  &trans
-                             &trans      &trans     &trans       &trans      &trans  &trans
+        &kp EXCL   &kp AT    &kp POUND  &kp DLLR   &kp PRCNT    &kp STAR    &kp N7  &kp N8  &kp N9  &kp N0
+        &kp GRAVE  &sk LALT  &sk LCTRL  &sk LSHFT  &kp CARET    &kp MINUS   &kp N4  &kp N5  &kp N6  &kp PLUS
+&trans  &kp TILDE  &kp BSLH  &kp PIPE   &tog 2     &kp AMPS     &kp PERIOD  &kp N1  &kp N2  &kp N3  &kp FSLH  &trans
+                             &trans     &trans     &trans       &trans      &trans  &trans
             >;
         };
 
@@ -174,10 +194,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_CLR       &bt BT_CLR_ALL     &kp F12  &kp F7  &kp F8  &kp F9  &kp C_VOL_UP
-        &none         &sk LALT      &sk LEFT_SHIFT  &sk LCTRL        &kp PAUSE_BREAK    &kp F11  &kp F4  &kp F5  &kp F6  &kp C_VOLUME_DOWN
-&trans  &none         &none         &kp F2          &kp PRINTSCREEN  &kp SCROLLLOCK     &kp F10  &kp F1  &kp F2  &kp F3  &kp C_MUTE         &trans
-                                    &trans          &trans           &trans             &trans   &trans  &trans
+        &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR       &bt BT_CLR_ALL     &kp F12  &kp F7  &kp F8  &kp F9  &kp C_VOL_UP
+        &none         &sk LALT      &sk LCTRL     &sk LSHIFT       &kp PAUSE_BREAK    &kp F11  &kp F4  &kp F5  &kp F6  &kp C_VOLUME_DOWN
+&trans  &none         &none         &kp F2        &kp PRINTSCREEN  &kp SCROLLLOCK     &kp F10  &kp F1  &kp F2  &kp F3  &kp C_MUTE         &trans
+                                    &trans        &trans           &trans             &trans   &trans  &trans
             >;
         };
 
