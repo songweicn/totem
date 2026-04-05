@@ -72,20 +72,20 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp Q           &kp W           &kp F               &kp P        &kp B        &kp J        &kp L            &kp U                &kp Y            &kp SINGLE_QUOTE
-       &mt LEFT_WIN A  &mt LEFT_ALT R  &mt LEFT_CONTROL S  &mt LSHFT T  &kp G        &kp M        &mt RSHFT N      &mt RIGHT_CONTROL E  &mt RIGHT_ALT I  &mt RIGHT_GUI O
-&none  &kp Z           &kp X           &kp C               &kp D        &kp V        &kp K        &kp H            &kp COMMA            &kp DOT          &kp SLASH         &none
-                                       &lt 3 ESCAPE        &lt 1 SPACE  &lt 2 TAB    &lt 5 ENTER  &lt 4 BACKSPACE  &lt 6 DELETE
+       &kp Q           &kp W           &kp F             &kp P        &kp B        &kp J        &kp L            &kp U         &kp Y            &kp SINGLE_QUOTE
+       &mt LEFT_WIN A  &mt LEFT_ALT R  &mt LEFT_SHIFT S  &mt LCTRL T  &kp G        &kp M        &mt RCTRL N      &mt RSHIFT E  &mt RIGHT_ALT I  &mt RIGHT_GUI O
+&to 0  &kp Z           &kp X           &kp C             &kp D        &kp V        &kp K        &kp H            &kp COMMA     &kp DOT          &kp SLASH         &to 0
+                                       &lt 3 ESCAPE      &lt 1 SPACE  &lt 2 TAB    &lt 5 ENTER  &lt 4 BACKSPACE  &lt 6 DELETE
             >;
         };
 
         nav {
             label = "nav";
             bindings = <
-        &none         &none         &none             &none           &none     &kp INSERT  &kp HOME        &kp UP_ARROW    &kp END          &kp PAGE_UP
-        &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none     &kp CAPS    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_DOWN
-&trans  &none         &none         &none             &none           &none     &kp LC(Y)   &kp LC(V)       &kp LC(C)       &kp LC(X)        &kp LC(Z)      &trans
-                                    &trans            &trans          &trans    &kp ENTER   &kp BACKSPACE   &kp DELETE
+        &none         &none         &none             &none           &none     &kp ESC    &kp BACKSPACE  &mt LC(HOME) UP   &kp DEL        &kp PAGE_UP
+        &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none     &kp TAB    &mt HOME LEFT  &mt LC(END) DOWN  &mt END RIGHT  &kp PAGE_DOWN
+&trans  &none         &none         &none             &none           &none     &kp CAPS   &kp LS(TAB)    &kp LC(TAB)       &kp TAB        &kp LC(Z)      &trans
+                                    &trans            &trans          &trans    &kp ENTER  &kp BACKSPACE  &kp DELETE
             >;
         };
 
@@ -127,20 +127,20 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp LEFT_BRACKET  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp RIGHT_BRACKET    &none  &none           &none             &none         &none
-        &kp SEMICOLON     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp EQUAL            &none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_WIN
-&trans  &kp GRAVE         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BACKSLASH        &none  &none           &none             &none         &none         &trans
-                                        &kp PERIOD    &kp NUMBER_0  &kp MINUS            &none  &trans          &none
+        &kp LEFT_BRACKET  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp RIGHT_BRACKET    &none      &kp N7  &kp N8  &kp N9  &kp N0
+        &kp SEMICOLON     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp EQUAL            &none      &kp N4  &kp N5  &kp N6  &kp PLUS
+&trans  &kp GRAVE         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BACKSLASH        &kp GRAVE  &kp N1  &kp N2  &kp N3  &kp EQUAL  &trans
+                                        &kp PERIOD    &kp NUMBER_0  &kp MINUS            &none      &trans  &none
             >;
         };
 
         sym {
             label = "sym";
             bindings = <
-        &kp LEFT_BRACE  &kp AMPERSAND    &kp ASTERISK          &kp LEFT_PARENTHESIS   &kp RIGHT_BRACE    &none   &none           &none             &none         &none
-        &kp COLON       &kp DOLLAR       &kp PERCENT           &kp LCTRL              &kp PLUS           &none   &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI
-&trans  &kp TILDE       &kp EXCLAMATION  &kp AT_SIGN           &kp POUND              &kp PIPE           &none   &none           &none             &none         &none         &trans
-                                         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE     &trans  &none           &none
+        &kp LEFT_BRACE  &kp AMPERSAND    &kp ASTERISK          &kp LEFT_PARENTHESIS   &kp RIGHT_BRACE    &none   &kp AMPS         &kp STAR     &kp LPAR   &kp RPAR
+        &kp COLON       &kp DOLLAR       &kp PERCENT           &kp LCTRL              &kp PLUS           &none   &kp DOLLAR       &kp PERCENT  &kp CARET  &kp SEMI
+&trans  &kp TILDE       &kp EXCLAMATION  &kp AT_SIGN           &kp POUND              &kp PIPE           &none   &kp EXCLAMATION  &kp AT       &kp POUND  &kp COLON  &trans
+                                         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE     &trans  &none            &none
             >;
         };
 
