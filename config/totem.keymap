@@ -133,7 +133,7 @@
             bindings = <
        &kp Q       &kp W           &kp F        &kp P        &kp B          &kp J      &kp L          &kp U         &kp Y            &kp SINGLE_QUOTE
        &kp A       &mt LEFT_ALT R  &mt LCTRL S  &mt LSHFT T  &kp G          &kp M      &mt RSHFT N    &mt RCTRL E   &mt RIGHT_ALT I  &kp O
-&to 2  &mt LWIN Z  &kp X           &kp C        &kp D        &kp V          &kp K      &kp H          &kp COMMA     &kp DOT          &kp SLASH         &to 0
+&to 2  &mt LWIN Z  &kp X           &kp C        &kp D        &kp V          &kp K      &kp H          &kp COMMA     &kp DOT          &kp SLASH         &to 2
                                    &mo 4        &lt 1 SPACE  &lt 2 ENTER    &kp ENTER  &kp BACKSPACE  &lt 3 DELETE
             >;
         };
@@ -165,10 +165,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp EXCL       &kp AT           &kp POUND       &kp DLLR        &kp PRCNT        &kp STAR   &kp N7        &kp N8        &kp N9       &kp MINUS
-        &kp LC(CARET)  &mt LALT AMPS    &mt LCTRL STAR  &mt LSHFT LPAR  &kp RPAR         &kp COLON  &mt RSHFT N4  &mt RCTRL N5  &mt RALT N6  &kp PLUS
-&trans  &kp LWIN       &mt TILDE GRAVE  &mt PIPE BSLH   &mt LBRC LBKT   &mt RBRC RBKT    &kp SEMI   &kp N1        &kp N2        &kp N3       &kp FSLH   &trans
-                                        &trans          &trans          &trans           &trans     &kp N0        &kp PERIOD
+       &kp EXCL       &kp AT           &kp POUND       &kp DLLR        &kp PRCNT        &kp STAR   &kp N7        &kp N8        &kp N9       &kp MINUS
+       &kp LC(CARET)  &mt LALT AMPS    &mt LCTRL STAR  &mt LSHFT LPAR  &kp RPAR         &kp COLON  &mt RSHFT N4  &mt RCTRL N5  &mt RALT N6  &kp PLUS
+&to 0  &kp LWIN       &mt TILDE GRAVE  &mt PIPE BSLH   &mt LBRC LBKT   &mt RBRC RBKT    &kp SEMI   &kp N1        &kp N2        &kp N3       &kp FSLH   &to 0
+                                       &trans          &trans          &trans           &trans     &kp N0        &kp PERIOD
             >;
         };
 
