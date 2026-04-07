@@ -133,18 +133,8 @@
             bindings = <
        &kp Q       &kp W           &kp F        &kp P        &kp B          &kp J      &kp L          &kp U         &kp Y            &kp SINGLE_QUOTE
        &kp A       &mt LEFT_ALT R  &mt LCTRL S  &mt LSHFT T  &kp G          &kp M      &mt RSHFT N    &mt RCTRL E   &mt RIGHT_ALT I  &kp O
-&to 2  &mt LWIN Z  &kp X           &kp C        &kp D        &kp V          &kp K      &kp H          &kp COMMA     &kp DOT          &kp SLASH         &to 2
+&to 1  &mt LWIN Z  &kp X           &kp C        &kp D        &kp V          &kp K      &kp H          &kp COMMA     &kp DOT          &kp SLASH         &to 1
                                    &mo 4        &lt 1 SPACE  &lt 2 ENTER    &kp ENTER  &kp BACKSPACE  &lt 3 DELETE
-            >;
-        };
-
-        nav {
-            label = "nav";
-            bindings = <
-        &kp ESC        &kp LA(F4)    &kp LS(TAB)       &kp TAB         &none     &kp INS   &kp BACKSPACE   &mt HOME UP   &kp DEL          &kp PAGE_UP
-        &kp TAB        &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none     &kp DEL   &mt PG_UP LEFT  &mt END DOWN  &mt PG_DN RIGHT  &kp PAGE_DOWN
-&trans  &mt LWIN CAPS  &none         &none             &tog 1          &none     &kp CAPS  &kp LS(TAB)     &kp LC(TAB)   &kp TAB          &none          &trans
-                                     &trans            &trans          &trans    &trans    &trans          &trans
             >;
         };
 
@@ -169,6 +159,16 @@
        &kp LC(CARET)  &mt LALT AMPS    &mt LCTRL STAR  &mt LSHFT LPAR  &kp RPAR         &kp COLON  &mt RSHFT N4  &mt RCTRL N5  &mt RALT N6  &kp PLUS
 &to 0  &kp LWIN       &mt TILDE GRAVE  &mt PIPE BSLH   &mt LBRC LBKT   &mt RBRC RBKT    &kp SEMI   &kp N1        &kp N2        &kp N3       &kp FSLH   &to 0
                                        &trans          &trans          &trans           &trans     &kp N0        &kp PERIOD
+            >;
+        };
+
+        nav {
+            label = "nav";
+            bindings = <
+        &kp ESC        &kp LA(F4)    &kp LS(TAB)       &kp TAB         &none     &kp INS   &kp BACKSPACE   &mt HOME UP   &kp DEL          &kp PAGE_UP
+        &kp TAB        &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none     &kp DEL   &mt PG_UP LEFT  &mt END DOWN  &mt PG_DN RIGHT  &kp PAGE_DOWN
+&trans  &mt LWIN CAPS  &none         &none             &tog 2          &none     &kp CAPS  &kp LS(TAB)     &kp LC(TAB)   &kp TAB          &none          &trans
+                                     &trans            &trans          &trans    &trans    &trans          &trans
             >;
         };
 
