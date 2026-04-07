@@ -40,17 +40,12 @@
 
         combo_pgup {
             bindings = <&kp PG_UP>;
-            key-positions = <9 19>;
+            key-positions = <9 8>;
         };
 
         combo_pgdn {
             bindings = <&kp PAGE_DOWN>;
-            key-positions = <19 30>;
-        };
-
-        enter {
-            bindings = <&kp ENTER>;
-            key-positions = <18 19>;
+            key-positions = <19 18>;
         };
 
         equal {
