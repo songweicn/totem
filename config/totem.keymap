@@ -102,6 +102,53 @@
             bindings = <&kp LC(X)>;
             key-positions = <22 24>;
         };
+
+        numpad {
+            bindings = <&tog 1>;
+            key-positions = <16 17 18 19>;
+        };
+    };
+
+    macros {
+        paren_in: paren_in {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LPAR &kp RPAR &kp LEFT>;
+
+            label = "PAREN_IN";
+        };
+
+        bracket_in: bracket_in {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LBKT &kp RBKT &kp LEFT>;
+
+            label = "BRACKET_IN";
+        };
+
+        brace_in: brace_in {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LBRC &kp RBRC &kp LEFT>;
+
+            label = "BRACE_IN";
+        };
+
+        dquote_in: quote_in {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp DQT &kp DQT &kp LEFT>;
+
+            label = "QUOTE_IN";
+        };
+
+        angle_in: angle_in {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LT &kp GT &kp LEFT>;
+
+            label = "ANGLE_IN";
+        };
     };
 
     keymap {
@@ -128,7 +175,7 @@
             bindings = <
        &kp Q       &kp W           &kp F        &kp P        &kp B          &kp J      &kp L          &kp U         &kp Y            &kp SINGLE_QUOTE
        &kp A       &mt LEFT_ALT R  &mt LCTRL S  &mt LSHFT T  &kp G          &kp M      &mt RSHFT N    &mt RCTRL E   &mt RIGHT_ALT I  &kp O
-&to 1  &mt LWIN Z  &kp X           &kp C        &kp D        &kp V          &kp K      &kp H          &kp COMMA     &kp DOT          &kp SLASH         &to 1
+&to 0  &mt LWIN Z  &kp X           &kp C        &kp D        &kp V          &kp K      &kp H          &kp COMMA     &kp DOT          &kp SLASH         &to 0
                                    &mo 4        &lt 1 SPACE  &lt 2 ENTER    &kp ENTER  &kp BACKSPACE  &lt 3 DELETE
             >;
         };
@@ -150,10 +197,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp EXCL       &kp AT           &kp POUND       &kp DLLR        &kp PRCNT        &kp STAR   &kp N7        &kp N8        &kp N9       &kp MINUS
-       &kp LC(CARET)  &mt LALT AMPS    &mt LCTRL STAR  &mt LSHFT LPAR  &kp RPAR         &kp COLON  &mt RSHFT N4  &mt RCTRL N5  &mt RALT N6  &kp PLUS
-&to 0  &kp LWIN       &mt TILDE GRAVE  &mt PIPE BSLH   &mt LBRC LBKT   &mt RBRC RBKT    &kp SEMI   &kp N1        &kp N2        &kp N3       &kp FSLH   &to 0
-                                       &trans          &trans          &trans           &trans     &kp N0        &kp PERIOD
+       &kp EXCL       &kp AT           &kp POUND       &kp DLLR     &kp PRCNT    &kp STAR   &kp N7        &kp N8        &kp N9       &kp MINUS
+       &kp LC(CARET)  &mt LALT AMPS    &mt LCTRL STAR  &paren_in    &angle_in    &kp COLON  &mt RSHFT N4  &mt RCTRL N5  &mt RALT N6  &kp PLUS
+&to 0  &kp LWIN       &mt TILDE GRAVE  &mt PIPE BSLH   &bracket_in  &brace_in    &kp SEMI   &kp N1        &kp N2        &kp N3       &kp FSLH   &to 0
+                                       &trans          &trans       &trans       &trans     &kp N0        &kp PERIOD
             >;
         };
 
