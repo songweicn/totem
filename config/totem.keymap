@@ -133,6 +133,11 @@
             bindings = <&kp ENTER>;
             key-positions = <19 18>;
         };
+
+        mouse {
+            bindings = <&to 3>;
+            key-positions = <15 19>;
+        };
     };
 
     macros {
@@ -202,7 +207,7 @@
        &kp Q        &kp W        &kp F         &kp P          &kp B        &kp J       &kp L          &kp U         &kp Y        &kp SINGLE_QUOTE
        &hml LWIN A  &hml LALT R  &hml LCTRL S  &hml LSHIFT T  &kp G        &kp M       &hmr RSHIFT N  &hmr RCTRL E  &hmr RALT I  &hmr RWIN O
 &to 3  &kp Z        &kp X        &kp C         &kp D          &kp V        &kp K       &kp H          &kp COMMA     &kp DOT      &kp SLASH         &to 1
-                                 &sk LWIN      &lt 1 SPACE    &sk LCTRL    &sk LSHIFT  &kp BACKSPACE  &lt 2 DELETE
+                                 &sk LALT      &lt 1 SPACE    &sk LCTRL    &sk LSHIFT  &kp BACKSPACE  &lt 2 DELETE
             >;
         };
 
