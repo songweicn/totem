@@ -87,7 +87,7 @@
 
         minus {
             bindings = <&kp MINUS>;
-            key-positions = <11 12>;
+            key-positions = <12 13>;
         };
     };
 
@@ -150,7 +150,7 @@
             bindings = <
         &kp LBRC   &kp AMPS    &kp STAR     &kp LPAR   &kp RIGHT_BRACE    &none   &none            &none      &none     &none
         &kp COLON  &kp DOLLAR  &kp PERCENT  &kp CARET  &kp PLUS           &none   &sk RIGHT_SHIFT  &sk RCTRL  &sk RALT  &sk RGUI
-&trans  &kp GRAVE  &kp EXCL    &kp AT       &kp HASH   &kp PIPE           &none   &none            &trans     &trans    &trans    &trans
+&trans  &kp TILDE  &kp EXCL    &kp AT       &kp HASH   &kp PIPE           &none   &none            &trans     &trans    &trans    &trans
                                &kp LPAR     &kp RPAR   &kp UNDER          &trans  &trans           &trans
             >;
         };
