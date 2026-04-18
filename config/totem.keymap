@@ -169,8 +169,8 @@
             bindings = <
        &kp Q        &kp W        &kp F         &kp P          &kp B        &kp J      &kp L          &kp U         &kp Y        &kp SINGLE_QUOTE
        &hml LWIN A  &hml LALT R  &hml LCTRL S  &hml LSHIFT T  &kp G        &kp M      &hmr RSHIFT N  &hmr RCTRL E  &hmr RALT I  &hmr RWIN O
-&to 3  &kp Z        &kp X        &kp C         &kp D          &kp V        &kp K      &kp H          &kp COMMA     &kp DOT      &kp SLASH         &to 1
-                                 &sk LSHIFT    &lt 1 SPACE    &sk LCTRL    &kp ENTER  &kp BACKSPACE  &lt 2 DELETE
+&to 2  &kp Z        &kp X        &kp C         &kp D          &kp V        &kp K      &kp H          &kp COMMA     &kp DOT      &kp SLASH         &to 1
+                                 &sk LSHIFT    &lt 1 SPACE    &sk LCTRL    &kp ENTER  &kp BACKSPACE  &sk RSHIFT
             >;
         };
 
@@ -191,10 +191,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp EXCL       &kp AT    &kp POUND  &kp DLLR  &kp PRCNT    &kp LBKT   &kp N7  &kp N8      &kp N9  &kp RBKT
-        &kp CARET      &kp AMPS  &kp STAR   &kp LPAR  &kp RPAR     &kp SEMI   &kp N4  &kp N5      &kp N6  &kp EQUAL
-&trans  &kp BACKSLASH  &kp LBRC  &kp RBRC   &kp LBKT  &kp RBKT     &kp GRAVE  &kp N1  &kp N2      &kp N3  &kp FSLH   &to 0
-                                 &trans     &trans    &trans       &kp MINUS  &kp N0  &kp PERIOD
+       &kp EXCL         &kp AT    &kp POUND  &kp DLLR             &kp PRCNT        &kp MINUS  &kp N7  &kp N8      &kp N9  &kp PLUS
+       &kp CARET        &kp AMPS  &kp STAR   &kp LPAR             &kp RPAR         &kp SEMI   &kp N4  &kp N5      &kp N6  &kp EQUAL
+&to 0  &mt TILDE GRAVE  &kp LBRC  &kp RBRC   &mt LEFT_BRACE LBKT  &mt RBRC RBRC    &kp GRAVE  &kp N1  &kp N2      &kp N3  &kp FSLH   &to 0
+                                  &trans     &trans               &trans           &kp MINUS  &kp N0  &kp PERIOD
             >;
         };
 
@@ -225,10 +225,10 @@
         mouse {
             label = "mouse";
             bindings = <
-        &kp LA(F4)  &kp LC(W)     &none             &none           &none     &kp LA(F4)       &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP
-        &sk LWIN    &sk LEFT_ALT  &sk LEFT_CONTROL  &sk LEFT_SHIFT  &none     &kp LC(W)        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN
-&trans  &kp CAPS    &none         &none             &none           &none     &kp CAPS         &mkp LCLK       &mkp MCLK       &mkp RCLK        &kp SCROLLLOCK  &trans
-                                  &trans            &trans          &trans    &kp LS(LC(TAB))  &kp LC(TAB)     &trans
+       &kp LA(F4)  &kp LC(W)     &none             &none           &none     &kp LA(F4)       &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP
+       &sk LWIN    &sk LEFT_ALT  &sk LEFT_CONTROL  &sk LEFT_SHIFT  &none     &kp LC(W)        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN
+&to 0  &kp CAPS    &none         &none             &none           &none     &kp CAPS         &mkp LCLK       &mkp MCLK       &mkp RCLK        &kp SCROLLLOCK  &to 0
+                                 &trans            &trans          &trans    &kp LS(LC(TAB))  &kp LC(TAB)     &trans
             >;
         };
 
