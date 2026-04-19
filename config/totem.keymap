@@ -66,13 +66,13 @@
 
         up {
             bindings = <&kp UP>;
-            key-positions = <7 17>;
+            key-positions = <17 6>;
             layers = <0>;
         };
 
         down {
             bindings = <&kp DOWN>;
-            key-positions = <17 28>;
+            key-positions = <28 27>;
             layers = <0>;
         };
 
