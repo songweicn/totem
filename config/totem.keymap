@@ -211,7 +211,7 @@
         times {
             bindings = <&kp ASTERISK>;
             key-positions = <8 18>;
-            layers = <0 2>;
+            layers = <0 1>;
         };
 
         devide {
