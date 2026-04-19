@@ -298,10 +298,10 @@
         nav {
             label = "nav";
             bindings = <
-       &kp LA(F4)    &kp LC(W)     &kp LA(LS(TAB))   &kp LA(TAB)     &none     &kp ESC   &mt LC(BACKSPACE) BACKSPACE  &mt LC(HOME) UP   &mt LC(DEL) DEL  &kp PG_UP
-       &sk LEFT_GUI  &sk LEFT_ALT  &sk LEFT_CONTROL  &sk LEFT_SHIFT  &none     &kp TAB   &mt HOME LEFT                &mt LC(END) DOWN  &mt END RIGHT    &kp PG_DN
-&to 0  &none         &none         &none             &tog 3          &none     &kp CAPS  &kp LC(LS(TAB))              &kp LC(LS(TAB))   &kp LC(TAB)      &kp ENTER  &to 0
-                                   &trans            &trans          &trans    &trans    &trans                       &trans
+        &kp LA(F4)    &kp LC(W)     &kp LA(LS(TAB))   &kp LA(TAB)     &none     &kp ESC   &mt LC(BACKSPACE) BACKSPACE  &mt LC(HOME) UP   &mt LC(DEL) DEL  &kp PG_UP
+        &sk LEFT_GUI  &sk LEFT_ALT  &sk LEFT_CONTROL  &sk LEFT_SHIFT  &none     &kp TAB   &mt HOME LEFT                &mt LC(END) DOWN  &mt END RIGHT    &kp PG_DN
+&trans  &none         &none         &none             &tog 3          &none     &kp CAPS  &kp LC(LS(TAB))              &kp LC(LS(TAB))   &kp LC(TAB)      &kp ENTER  &trans
+                                    &trans            &trans          &trans    &trans    &trans                       &trans
             >;
         };
 
@@ -310,7 +310,7 @@
             bindings = <
         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR        &kp PRINTSCREEN  &kp F7  &kp F8  &kp F9  &kp F12
         &sk LWIN      &sk LALT      &sk LCTRL     &sk LSHFT     &bt BT_CLR_ALL    &kp SCROLLLOCK   &kp F4  &kp F5  &kp F6  &kp F11
-&trans  &kp F10       &kp F1        &kp F2        &tog 4        &bootloader       &kp PAUSE_BREAK  &kp F1  &kp F2  &kp F3  &kp F10  &trans
+&trans  &none         &none         &none         &tog 4        &bootloader       &kp PAUSE_BREAK  &kp F1  &kp F2  &kp F3  &kp F10  &trans
                                     &trans        &trans        &trans            &trans           &trans  &trans
             >;
         };
@@ -318,10 +318,10 @@
         mouse {
             label = "mouse";
             bindings = <
-       &kp LA(F4)  &kp LC(W)  &kp LA(LS(TAB))  &kp LA(TAB)  &none     &kp ESC   &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP
-       &sk LWIN    &sk LALT   &sk LCTRL        &sk LSHIFT   &none     &kp TAB   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN
-&to 0  &none       &none      &none            &tog 5       &none     &kp CAPS  &mkp LCLK       &mkp MCLK       &mkp RCLK        &kp SCROLLLOCK  &to 0
-                              &trans           &trans       &trans    &trans    &trans          &trans
+        &kp LA(F4)  &kp LC(W)  &kp LA(LS(TAB))  &kp LA(TAB)  &none     &kp ESC   &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP
+        &sk LWIN    &sk LALT   &sk LCTRL        &sk LSHIFT   &none     &kp TAB   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN
+&trans  &none       &none      &none            &tog 5       &none     &kp CAPS  &mkp LCLK       &mkp MCLK       &mkp RCLK        &kp SCROLLLOCK  &trans
+                               &trans           &trans       &trans    &trans    &trans          &trans
             >;
         };
     };
