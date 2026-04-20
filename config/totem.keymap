@@ -11,7 +11,6 @@
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
@@ -58,18 +57,18 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_esc {
+        esc {
             timeout-ms = <50>;
             key-positions = <0 1>;
             bindings = <&kp ESC>;
         };
 
-        combo_pgup {
+        pgup {
             bindings = <&kp PG_UP>;
             key-positions = <27 28>;
         };
 
-        combo_pgdn {
+        pgdn {
             bindings = <&kp PAGE_DOWN>;
             key-positions = <28 29>;
         };
@@ -81,17 +80,12 @@
 
         backspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <6 7>;
+            key-positions = <9 8>;
         };
 
         del {
             bindings = <&kp DEL>;
-            key-positions = <7 8>;
-        };
-
-        base {
-            bindings = <&to 0>;
-            key-positions = <20 31>;
+            key-positions = <19 18>;
         };
 
         up {
@@ -130,18 +124,34 @@
         };
 
         mouse {
-            bindings = <&to 3>;
+            bindings = <&to 5>;
             key-positions = <15 19>;
         };
 
         home {
             bindings = <&kp HOME>;
-            key-positions = <8 9>;
+            key-positions = <6 7>;
         };
 
         end {
             bindings = <&kp END>;
-            key-positions = <18 19>;
+            key-positions = <7 8>;
+        };
+
+        numpad {
+            bindings = <&tog 2>;
+            key-positions = <15 16>;
+        };
+
+        game {
+            bindings = <&tog 6>;
+            key-positions = <14 15>;
+        };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <10 11>;
+            layers = <0 1 2 3 4 5>;
         };
     };
 
@@ -167,17 +177,38 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp Q        &kp W        &kp F         &kp P          &kp B        &kp J      &kp L          &kp U         &kp Y        &kp SINGLE_QUOTE
-       &hml LWIN A  &hml LALT R  &hml LCTRL S  &hml LSHIFT T  &kp G        &kp M      &hmr RSHIFT N  &hmr RCTRL E  &hmr RALT I  &hmr RWIN O
-&to 2  &kp Z        &kp X        &kp C         &kp D          &kp V        &kp K      &kp H          &kp COMMA     &kp DOT      &kp SLASH         &to 1
-                                 &sk LSHIFT    &lt 1 SPACE    &sk LCTRL    &kp ENTER  &kp BACKSPACE  &sk RSHIFT
+       &kp Q  &kp W  &kp F       &kp P        &kp B    &kp J      &kp L            &kp U      &kp Y    &kp SINGLE_QUOTE
+       &kp A  &kp R  &kp S       &kp T        &kp G    &kp M      &kp N            &kp E      &kp I    &kp O
+&to 1  &kp Z  &kp X  &kp C       &kp D        &kp V    &kp K      &kp H            &kp COMMA  &kp DOT  &kp SLASH         &to 2
+                     &caps_word  &lt 1 SPACE  &mo 2    &sk RSHFT  &lt 3 BACKSPACE  &lt 4 DEL
             >;
         };
 
+        ext {
+            bindings = <
+        &kp ESC    &trans     &trans     &trans     &trans       &trans  &kp HOME   &kp UP    &kp END    &kp BACKSPACE
+        &sk LALT   &sk LWIN   &sk LSHFT  &sk LCTRL  &trans       &trans  &kp LEFT   &kp DOWN  &kp RIGHT  &kp DELETE
+&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LG(D)  &kp LC(V)    &trans  &kp PG_UP  &kp TAB   &kp PG_DN  &trans         &trans
+                              &trans     &trans     &trans       &trans  &kp ENTER  &trans
+            >;
+
+            label = "ext";
+        };
+
         num {
+            label = "num";
+            bindings = <
+       &none     &none       &none      &none          &kp LOCKING_NUM    &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp PLUS
+       &sk LALT  &sk LWIN    &sk LSHFT  &sk LCTRL      &none              &kp STAR   &kp N4  &kp N5  &kp N6  &kp MINUS
+&to 0  &none     &kp C_MENU  &kp TAB    &kp BACKSPACE  &kp ENTER          &kp N0     &kp N1  &kp N2  &kp N3  &kp FSLH   &to 0
+                             &trans     &trans         &trans             &trans     &trans  &trans
+            >;
+        };
+
+        sym {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
-            label = "num";
+            label = "sym";
 
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
@@ -191,10 +222,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp EXCL         &kp AT    &kp POUND  &kp DLLR             &kp PRCNT        &kp MINUS  &kp N7  &kp N8      &kp N9  &kp PLUS
-       &kp CARET        &kp AMPS  &kp STAR   &kp LPAR             &kp RPAR         &kp SEMI   &kp N4  &kp N5      &kp N6  &kp EQUAL
-&to 0  &mt TILDE GRAVE  &kp LBRC  &kp RBRC   &mt LEFT_BRACE LBKT  &mt RBRC RBRC    &kp GRAVE  &kp N1  &kp N2      &kp N3  &kp FSLH   &to 0
-                                  &trans     &trans               &trans           &kp MINUS  &kp N0  &kp PERIOD
+       &kp EXCL  &kp AT    &kp POUND  &kp DLLR   &kp PRCNT    &kp EQUAL  &kp GRAVE  &kp COLON  &kp SEMICOLON  &kp PLUS
+       &sk LALT  &sk LWIN  &sk LSHFT  &sk LCTRL  &kp CARET    &kp STAR   &kp LPAR   &kp LBRC   &kp LBKT       &kp MINUS
+&to 0  &none     &none     &kp BSLH   &kp PIPE   &kp AMPS     &kp TILDE  &kp RPAR   &kp RBRC   &kp RBKT       &kp UNDERSCORE  &to 0
+                           &trans     &trans     &trans       &trans     &trans     &trans
             >;
         };
 
@@ -215,26 +246,44 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &bt BT_SEL 0     &bt BT_SEL 1    &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_CLR        &kp C_VOL_UP  &kp F7  &kp F8  &kp F9  &kp F12
-       &sk LGUI         &sk LALT        &sk LCTRL        &sk LSHIFT    &bt BT_CLR_ALL    &kp C_VOL_DN  &kp F4  &kp F5  &kp F6  &kp F11
-&to 0  &kp PRINTSCREEN  &kp SCROLLLOCK  &kp PAUSE_BREAK  &kp INS       &bootloader       &kp C_MUTE    &kp F1  &kp F2  &kp F3  &kp F10  &to 0
-                                        &trans           &trans        &trans            &trans        &trans  &trans
+       &kp C_STOP  &kp C_FAST_FORWARD  &kp C_PLAY_PAUSE  &kp C_NEXT    &kp C_BRIGHTNESS_DEC    &kp F12  &kp F7  &kp F8  &kp F9  &kp LOCKING_SCROLL
+       &sk LALT    &sk LWIN            &sk LSHFT         &sk LCTRL     &kp C_BRIGHTNESS_DEC    &kp F11  &kp F4  &kp F5  &kp F6  &to 6
+&to 0  &kp C_MUTE  &kp C_VOLUME_DOWN   &kp LC(C)         &kp C_VOL_UP  &kp LC(V)               &kp F10  &kp F1  &kp F2  &kp F3  &to 0               &to 0
+                                       &trans            &trans        &trans                  &trans   &trans  &trans
             >;
         };
 
         mouse {
             label = "mouse";
             bindings = <
-       &kp LA(F4)  &kp LC(W)     &none             &none           &none     &kp LA(F4)       &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP
-       &sk LWIN    &sk LEFT_ALT  &sk LEFT_CONTROL  &sk LEFT_SHIFT  &none     &kp LC(W)        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN
-&to 0  &kp CAPS    &none         &none             &none           &none     &kp CAPS         &mkp LCLK       &mkp MCLK       &mkp RCLK        &kp SCROLLLOCK  &to 0
-                                 &trans            &trans          &trans    &kp LS(LC(TAB))  &kp LC(TAB)     &trans
+       &kp LA(F4)  &kp LC(W)  &none      &none      &none     &none            &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP
+       &sk LALT    &sk LWIN   &sk LSHFT  &sk LCTRL  &none     &none            &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN
+&to 0  &kp CAPS    &none      &none      &none      &none     &none            &mkp LCLK       &mkp MCLK       &mkp RCLK        &kp SCROLLLOCK  &to 0
+                              &trans     &trans     &trans    &kp LS(LC(TAB))  &kp LC(TAB)     &trans
             >;
+        };
+
+        game {
+            bindings = <
+           &kp Q  &kp W  &kp E      &kp R      &kp T    &kp Y      &kp U     &kp I       &kp O    &kp P
+           &kp A  &kp S  &kp D      &kp F      &kp G    &kp H      &kp J     &kp K       &kp L    &kp SEMI
+&kp LSHFT  &kp Z  &kp X  &kp C      &kp V      &kp B    &kp N      &kp M     &kp COMMA   &kp DOT  &kp FSLH  &kp RSHFT
+                         &kp LCTRL  &kp SPACE  &mo 2    &kp ENTER  &kp BSPC  &kp DELETE
+            >;
+
+            label = "game";
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
     };
 
-    conditional_layers { compatible = "zmk,conditional-layers"; };
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        fun {
+            if-layers = <1 3>;
+            then-layer = <4>;
+        };
+    };
 };
