@@ -154,6 +154,24 @@
             key-positions = <10 11>;
             layers = <0 1 2 3 4 5>;
         };
+
+        esc-nm {
+            bindings = <&kp ESC>;
+            key-positions = <5 6>;
+            layers = <2>;
+        };
+
+        tab-nm {
+            bindings = <&kp TAB>;
+            key-positions = <15 16>;
+            layers = <2>;
+        };
+
+        F2-nm {
+            bindings = <&kp F2>;
+            key-positions = <26 27>;
+            layers = <2>;
+        };
     };
 
     keymap {
