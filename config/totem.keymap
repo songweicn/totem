@@ -156,6 +156,22 @@
         };
     };
 
+    macros {
+        comma_space: comma_space {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA &kp SPACE>;
+            label = "COMMA_SPACE";
+        };
+
+        comma_enter: comma_enter {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA &kp ENTER>;
+            label = "COMMA_ENTER";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -180,7 +196,7 @@
             bindings = <
            &kp Q  &kp W  &kp F       &kp P        &kp B        &kp J      &kp L            &kp U      &kp Y    &kp SINGLE_QUOTE
            &kp A  &kp R  &kp S       &kp T        &kp G        &kp M      &kp N            &kp E      &kp I    &kp O
-&sk LCTRL  &kp Z  &kp X  &kp C       &kp D        &kp V        &kp K      &kp H            &kp COMMA  &kp DOT  &kp SLASH         &to 2
+&sk LCTRL  &kp Z  &kp X  &kp C       &kp D        &kp V        &kp K      &kp H            &sl 7      &kp DOT  &kp SLASH         &to 2
                          &lt 1 CAPS  &lt 2 SPACE  &sk LSHFT    &kp ENTER  &lt 3 BACKSPACE  &lt 4 DEL
             >;
         };
@@ -273,6 +289,17 @@
             >;
 
             label = "game";
+        };
+
+        comma+shift {
+            bindings = <
+          &kp LS(Q)  &kp LS(W)  &kp LS(F)  &kp LS(P)     &kp LS(B)    &kp LS(J)     &kp LS(L)  &kp LS(U)      &kp LS(Y)    &kp LS(APOS)
+          &kp LS(A)  &kp LS(R)  &kp LS(S)  &kp LS(T)     &kp LS(G)    &kp LS(M)     &kp LS(N)  &kp LS(E)      &kp LS(I)    &kp LS(O)
+&kp CAPS  &kp LS(Z)  &kp LS(X)  &kp LS(C)  &kp LS(D)     &kp LS(V)    &kp LS(K)     &kp LS(H)  &kp LS(COMMA)  &kp LS(DOT)  &kp LS(FSLH)  &trans
+                                &trans     &comma_space  &trans       &comma_enter  &trans     &trans
+            >;
+
+            label = "comma+shift";
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
