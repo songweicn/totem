@@ -145,7 +145,7 @@
         };
 
         game {
-            bindings = <&tog 8>;
+            bindings = <&tog 7>;
             key-positions = <14 15>;
         };
 
