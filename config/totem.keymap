@@ -205,10 +205,10 @@
 
         ext {
             bindings = <
-        &kp ESC    &kp LA(LEFT)  &mt LC(H) LC(F)  &kp LA(RIGHT)  &kp INS      &trans  &kp HOME   &kp UP    &kp END    &kp BACKSPACE
-        &sk LALT   &sk LWIN      &sk LSHFT        &sk LCTRL      &trans       &trans  &kp LEFT   &kp DOWN  &kp RIGHT  &kp DELETE
-&trans  &kp LC(Z)  &kp LC(X)     &kp LC(C)        &kp LG(D)      &kp LC(V)    &trans  &kp PG_UP  &kp TAB   &kp PG_DN  &kp ENTER      &trans
-                                 &trans           &trans         &trans       &trans  &trans     &trans
+        &kp ESC    &trans     &trans     &trans     &trans       &trans  &kp HOME   &kp UP    &kp END    &kp BACKSPACE
+        &sk LALT   &sk LWIN   &sk LSHFT  &sk LCTRL  &trans       &trans  &kp LEFT   &kp DOWN  &kp RIGHT  &kp DELETE
+&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LG(D)  &kp LC(V)    &trans  &kp PG_UP  &kp TAB   &kp PG_DN  &kp ENTER      &trans
+                              &trans     &trans     &trans       &trans  &trans     &trans
             >;
 
             label = "ext";
@@ -275,10 +275,10 @@
         mouse {
             label = "mouse";
             bindings = <
-       &kp LA(ESC)  &kp LA(LEFT)  &mt LC(H) LC(F)  &kp LA(RIGHT)  &kp INS      &none     &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP
-       &sk LALT     &sk LWIN      &sk LSHFT        &sk LCTRL      &none        &none     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN
-&to 0  &kp LC(Z)    &kp LC(X)     &kp LC(C)        &kp LG(D)      &kp LC(V)    &none     &kp PG_UP       &kp TAB         &kp PG_DN        &kp SCROLLLOCK  &to 0
-                                  &trans           &trans         &trans       &mkp MB3  &mkp MB1        &mkp MB2
+       &kp LA(F4)  &kp LC(W)  &none      &none      &none     &none     &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP
+       &sk LALT    &sk LWIN   &sk LSHFT  &sk LCTRL  &none     &none     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN
+&to 0  &none       &none      &none      &none      &none     &none     &kp PG_UP       &kp TAB         &kp PG_DN        &kp SCROLLLOCK  &to 0
+                              &trans     &trans     &trans    &mkp MB3  &mkp MB1        &mkp MB2
             >;
         };
 
