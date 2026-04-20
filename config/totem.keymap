@@ -26,6 +26,31 @@
 };
 
 / {
+    behaviors {
+        // 定义一个名为 caps_ext 的行为
+        caps_ext: caps_word_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "CAPS_WORD_LAYER_TAP";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;    // 长按 200ms 进入 Ext 层
+            quick-tap-ms = <150>;       // 快速连点则输出两次 Caps Word（虽然通常没必要）
+            flavor = "hold-preferred";  // 倾向于长按触发层，确保切层果断
+            bindings = <&mo>, <&caps_word>; // 第一个参数是层(Ext)，第二个是单击功能
+        };
+    };
+
+    keymap {
+        base {
+            bindings = <
+                // ... 其他键位
+                &caps_ext 1 0  // 这里假设你的 Ext 层是 1。0 是 caps_word 的占位符
+                // ... 其他键位
+            >;
+        };
+    };
+};
+
+/ {
     combos {
         compatible = "zmk,combos";
 
