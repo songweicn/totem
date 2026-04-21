@@ -28,6 +28,7 @@
 / {
     behaviors {
         // 定义一个名为 caps_ext 的行为
+
         caps_ext: caps_word_layer_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "CAPS_WORD_LAYER_TAP";
@@ -35,7 +36,8 @@
             tapping-term-ms = <200>;    // 长按 200ms 进入 Ext 层
             quick-tap-ms = <150>;       // 快速连点则输出两次 Caps Word（虽然通常没必要）
             flavor = "hold-preferred";  // 倾向于长按触发层，确保切层果断
-            bindings = <&mo>, <&caps_word>; // 第一个参数是层(Ext)，第二个是单击功能
+            bindings = <&mo>, <&caps_word>;
+ // 第一个参数是层(Ext)，第二个是单击功能
         };
     };
 
@@ -174,10 +176,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-           &kp Q  &kp W  &kp F       &kp P        &kp B        &kp J      &kp L            &kp U      &kp Y       &kp SINGLE_QUOTE
-           &kp A  &kp R  &kp S       &kp T        &kp G        &kp M      &kp N            &kp E      &kp I       &kp O
-&sk LCTRL  &kp Z  &kp X  &kp C       &kp D        &kp V        &kp K      &kp H            &kp COMMA  &kp PERIOD  &kp SLASH         &to 2
-                         &lt 1 CAPS  &lt 2 SPACE  &sk LSHFT    &kp ENTER  &lt 3 BACKSPACE  &lt 4 DEL
+           &kp Q  &kp W  &kp F          &kp P        &kp B        &kp J      &kp L            &kp U      &kp Y       &kp SINGLE_QUOTE
+           &kp A  &kp R  &kp S          &kp T        &kp G        &kp M      &kp N            &kp E      &kp I       &kp O
+&sk LCTRL  &kp Z  &kp X  &kp C          &kp D        &kp V        &kp K      &kp H            &kp COMMA  &kp PERIOD  &kp SLASH         &to 2
+                         &caps_ext 1 0  &lt 2 SPACE  &sk LSHFT    &kp ENTER  &lt 3 BACKSPACE  &lt 4 DEL
             >;
         };
 
@@ -197,7 +199,7 @@
             bindings = <
        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &kp LOCKING_NUM    &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp PLUS
        &sk LALT      &sk LWIN      &sk LSHFT     &sk LCTRL     &bt BT_CLR         &kp STAR   &kp N4  &kp N5  &kp N6  &kp MINUS
-&to 0  &tog 2        &kp C_MENU    &kp F2        &kp TAB       &none              &kp N0     &kp N1  &kp N2  &kp N3  &kp FSLH   &to 0
+&to 0  &tog 2        &kp C_MENU    &kp F2        &kp TAB       &kp LC(SPACE)      &kp N0     &kp N1  &kp N2  &kp N3  &kp FSLH   &to 0
                                    &trans        &trans        &trans             &trans     &trans  &trans
             >;
         };
