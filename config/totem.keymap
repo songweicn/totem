@@ -80,12 +80,12 @@
 
         backspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <9 8>;
+            key-positions = <6 7>;
         };
 
         del {
             bindings = <&kp DEL>;
-            key-positions = <19 18>;
+            key-positions = <7 8>;
         };
 
         up {
@@ -130,12 +130,12 @@
 
         home {
             bindings = <&kp HOME>;
-            key-positions = <6 7>;
+            key-positions = <6 8>;
         };
 
         end {
             bindings = <&kp END>;
-            key-positions = <7 8>;
+            key-positions = <27 29>;
         };
 
         numpad {
@@ -186,10 +186,10 @@
 
         ext {
             bindings = <
-        &kp ESC    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR        &trans  &kp HOME   &kp UP    &kp END    &kp BACKSPACE
-        &sk LALT   &sk LWIN      &sk LSHFT     &sk LCTRL     &bt BT_CLR_ALL    &trans  &kp LEFT   &kp DOWN  &kp RIGHT  &kp DELETE
-&trans  &kp LC(Z)  &kp LC(X)     &kp LC(C)     &kp LC(V)     &kp LC(SPACE)     &trans  &kp PG_UP  &kp TAB   &kp PG_DN  &kp ENTER      &trans
-                                 &trans        &trans        &trans            &trans  &trans     &trans
+        &kp ESC    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR        &trans  &kp BACKSPACE  &kp UP    &kp DEL    &kp HOME
+        &sk LALT   &sk LWIN      &sk LSHFT     &sk LCTRL     &bt BT_CLR_ALL    &trans  &kp LEFT       &kp DOWN  &kp RIGHT  &kp END
+&trans  &kp LC(Z)  &kp LC(X)     &kp LC(C)     &kp LC(V)     &kp LC(SPACE)     &trans  &kp PG_UP      &kp TAB   &kp PG_DN  &kp ENTER  &trans
+                                 &trans        &trans        &trans            &trans  &trans         &trans
             >;
 
             label = "ext";
@@ -198,10 +198,10 @@
         num {
             label = "num";
             bindings = <
-       &kp ESC   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR        &kp EQUAL  &kp N7  &kp N8      &kp N9  &kp PLUS
-       &sk LALT  &sk LWIN      &sk LSHFT     &sk LCTRL     &bt BT_CLR_ALL    &kp STAR   &kp N4  &kp N5      &kp N6  &kp MINUS
-&to 0  &tog 2    &kp C_MENU    &kp F2        &kp TAB       &kp LC(SPACE)     &kp N0     &kp N1  &kp N2      &kp N3  &kp FSLH   &to 0
-                               &trans        &trans        &trans            &trans     &kp N0  &kp PERIOD
+       &kp ESC   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR        &kp EQUAL  &kp N7      &kp N8      &kp N9  &kp PLUS
+       &sk LALT  &sk LWIN      &sk LSHFT     &sk LCTRL     &bt BT_CLR_ALL    &kp STAR   &kp N4      &kp N5      &kp N6  &kp MINUS
+&to 0  &tog 2    &kp C_MENU    &kp F2        &kp TAB       &kp LC(SPACE)     &kp N0     &kp N1      &kp N2      &kp N3  &kp FSLH   &to 0
+                               &trans        &trans        &trans            &kp N0     &kp PERIOD  &kp PERIOD
             >;
         };
 
