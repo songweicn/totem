@@ -94,16 +94,19 @@
             timeout-ms = <50>;
             key-positions = <1 2>;
             bindings = <&kp ESC>;
+            layers = <0 1 2 3 4 5>;
         };
 
         pgup {
             bindings = <&kp PG_UP>;
             key-positions = <8 9>;
+            layers = <0 1 4 5>;
         };
 
         pgdn {
             bindings = <&kp PAGE_DOWN>;
             key-positions = <18 19>;
+            layers = <0 1 4 5>;
         };
 
         enter {
@@ -124,21 +127,25 @@
         up {
             bindings = <&kp UP>;
             key-positions = <7 17>;
+            layers = <0 1 4 5>;
         };
 
         down {
             bindings = <&kp DOWN>;
             key-positions = <17 28>;
+            layers = <0 1 4 5>;
         };
 
         left {
             bindings = <&kp LEFT>;
             key-positions = <17 16>;
+            layers = <0 1 4 5>;
         };
 
         right {
             bindings = <&kp RIGHT>;
             key-positions = <17 18>;
+            layers = <0 1 4 5>;
         };
 
         copy {
@@ -193,6 +200,7 @@
         capsword {
             bindings = <&caps_word>;
             key-positions = <10 11>;
+            layers = <0>;
         };
     };
 
