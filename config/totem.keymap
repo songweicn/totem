@@ -290,7 +290,7 @@
             bindings = <
         &kp LA(F4)  &kp LC(W)  &kp LA(LS(TAB))  &kp LA(TAB)  &bt BT_CLR        &kp ESC    &kp HOME         &kp UP    &kp END      &kp PG_UP
         &sk LALT    &sk LWIN   &sk LSHFT        &sk LCTRL    &bt BT_CLR_ALL    &kp TAB    &kp LEFT         &kp DOWN  &kp RIGHT    &kp PG_DN
-&trans  &kp LC(Z)   &kp LC(X)  &kp LC(C)        &kp LC(V)    &kp LC(V)         &kp CAPS   &kp LS(LC(TAB))  &kp TAB   &kp LC(TAB)  &kp C_MENU  &trans
+&trans  &kp LC(Z)   &kp LC(X)  &kp LC(C)        &kp LC(V)    &kp LC(V)         &kp CAPS   &kp LS(LC(TAB))  &kp TAB   &kp LC(TAB)  &kp K_APPLICATION  &trans
                                &none            &none        &trans            &kp ENTER  &kp BACKSPACE    &kp DEL
             >;
 
