@@ -81,7 +81,8 @@
                 quick-tap-ms = <150>;       // 快速双击则不识别为长按（防止连续输入时的意外切层）
                 flavor = "hold-preferred";  // 倾向于长按触发，确保切层反应迅速
                 bindings = <&mo>, <&sk>;
-    // 第一个是长按绑定的行为 (Layer)，第二个是单击绑定的行为 (Sticky Key)
+
+                // 第一个是长按绑定的行为 (Layer)，第二个是单击绑定的行为 (Sticky Key)
             };
         };
     };
@@ -232,10 +233,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-           &kp Q  &kp W  &kp F          &kp P        &kp B                  &kp J      &kp L            &kp U        &kp Y       &kp SINGLE_QUOTE
-           &kp A  &kp R  &kp S          &kp T        &kp G                  &kp M      &kp N            &kp E        &kp I       &kp O
-&sk LCTRL  &kp Z  &kp X  &kp C          &kp D        &kp V                  &kp K      &kp H            &comma_semi  &dot_colon  &qmark_excl       &to 1
-                         &caps_ext 3 0  &lt 1 SPACE  &shft_layer 4 LSHFT    &kp ENTER  &lt 2 BACKSPACE  &lt 4 DEL
+           &kp Q  &kp W  &kp F          &kp P        &kp B                  &kp J        &kp L            &kp U        &kp Y       &kp SINGLE_QUOTE
+           &kp A  &kp R  &kp S          &kp T        &kp G                  &kp M        &kp N            &kp E        &kp I       &kp O
+&sk LCTRL  &kp Z  &kp X  &kp C          &kp D        &kp V                  &kp K        &kp H            &comma_semi  &dot_colon  &qmark_excl       &to 1
+                         &caps_ext 3 0  &lt 1 SPACE  &shft_layer 2 LSHFT    &lt 5 ENTER  &lt 4 BACKSPACE  &lt 6 DEL
             >;
         };
 
@@ -299,8 +300,8 @@
 
         nav {
             bindings = <
-        &kp LA(F4)  &kp LC(W)  &kp LA(LS(TAB))  &kp LA(TAB)  &bt BT_CLR        &kp ESC    &kp HOME         &kp UP    &kp END      &kp PG_UP
-        &sk LALT    &sk LWIN   &sk LSHFT        &sk LCTRL    &bt BT_CLR_ALL    &kp TAB    &kp LEFT         &kp DOWN  &kp RIGHT    &kp PG_DN
+        &kp LA(F4)  &kp LC(W)  &kp LA(LS(TAB))  &kp LA(TAB)  &bt BT_CLR        &kp HOME   &kp BACKSPACE    &kp UP    &kp DEL      &kp PG_UP
+        &sk LALT    &sk LWIN   &sk LSHFT        &sk LCTRL    &bt BT_CLR_ALL    &kp END    &kp LEFT         &kp DOWN  &kp RIGHT    &kp PG_DN
 &trans  &kp LC(Z)   &kp LC(X)  &kp LC(C)        &kp LC(V)    &kp LC(V)         &kp CAPS   &kp LS(LC(TAB))  &kp TAB   &kp LC(TAB)  &kp K_APPLICATION  &trans
                                &none            &none        &trans            &kp ENTER  &kp BACKSPACE    &kp DEL
             >;
