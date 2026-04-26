@@ -72,6 +72,15 @@
 
                 mods = <(MOD_LSFT|MOD_RSFT)>;
             };
+            shft_layer: shft_layer {
+                compatible = "zmk,behavior-hold-tap";
+                label = "SHFT_LAYER";
+                #binding-cells = <2>;
+                tapping-term-ms = <200>;    // 长按超过 200ms 识别为切层
+                quick-tap-ms = <150>;       // 快速双击则不识别为长按（防止连续输入时的意外切层）
+                flavor = "hold-preferred";  // 倾向于长按触发，确保切层反应迅速
+                bindings = <&mo>, <&sk>;    // 第一个是长按绑定的行为 (Layer)，第二个是单击绑定的行为 (Sticky Key)
+            };
         };
     };
 
