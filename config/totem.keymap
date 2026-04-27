@@ -246,7 +246,7 @@
         };
 
         mouse {
-            bindings = <&tog 5>;
+            bindings = <&tog 4>;
             key-positions = <15 19>;
         };
 
@@ -270,11 +270,6 @@
             bindings = <&kp LC(Z)>;
             key-positions = <21 22>;
             layers = <0 1 4 5 3>;
-        };
-
-        fu {
-            bindings = <&tog 3>;
-            key-positions = <2 7>;
         };
     };
 
@@ -300,10 +295,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-           &kp Q             &kp W             &kp F              &kp P               &kp B                  &kp J      &kp L               &kp U              &kp Y             &kp SINGLE_QUOTE
-           &hml_mods LWIN A  &hml_mods LALT R  &hml_mods S LCTRL  &hml_shift LSHFT T  &kp G                  &kp M      &hmr_shift RSHFT N  &hmr_mods RCTRL E  &hmr_mods RALT I  &hmr_mods RWIN O
-&sk LCTRL  &kp Z             &kp X             &kp C              &kp D               &kp V                  &kp K      &kp H               &comma_semi        &dot_colon        &qmark_excl       &to 1
-                                               &caps_ext 3 0      &lt 1 SPACE         &shft_layer 2 LSHFT    &kp ENTER  &kp BACKSPACE       &kp DEL
+           &kp Q             &kp W             &kp F              &kp P               &kp B        &kp J      &kp L               &kp U              &kp Y             &kp SINGLE_QUOTE
+           &hml_mods LWIN A  &hml_mods LALT R  &hml_mods S LCTRL  &hml_shift LSHFT T  &kp G        &kp M      &hmr_shift RSHFT N  &hmr_mods RCTRL E  &hmr_mods RALT I  &hmr_mods RWIN O
+&sk LCTRL  &kp Z             &kp X             &kp C              &kp D               &kp V        &kp K      &kp H               &comma_semi        &dot_colon        &qmark_excl       &to 1
+                                               &caps_ext 3 0      &lt 1 SPACE         &sk LSHFT    &kp ENTER  &lt 2 BACKSPACE     &kp DEL
             >;
         };
 
@@ -392,7 +387,7 @@
         compatible = "zmk,conditional-layers";
 
         fun {
-            if-layers = <3 1>;
+            if-layers = <1 2>;
             then-layer = <3>;
         };
     };
