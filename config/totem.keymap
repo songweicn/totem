@@ -306,18 +306,18 @@
             label = "num";
             bindings = <
        &kp TILDE             &kp AT               &kp POUND             &kp DLLR              &kp PRCNT    &kp GRAVE  &kp N7              &kp N8              &kp N9             &kp PLUS
-       &hml_mods LWIN CARET  &hml_mods LALT AMPS  &hml_mods LCTRL LPAR  &hml_mods LSHFT LBKT  &kp LBRC     &kp STAR   &hmr_mods RSHFT N4  &hmr_mods RCTRL N5  &hmr_mods RALT N6  &hmr_mods RWIN MINUS
-&to 0  &kp BSLH              &kp PIPE             &kp RPAR              &kp RBKT              &kp RBRC     &kp EQUAL  &kp N1              &kp N2              &kp N3             &kp FSLH              &to 0
-                                                  &none                 &trans                &none        &kp N0     &kp PERIOD          &kp COMMA
+       &hml_mods LWIN CARET  &hml_mods LALT AMPS  &hml_mods LCTRL LBKT  &hml_mods LSHFT LPAR  &kp LBRC     &kp STAR   &hmr_mods RSHFT N4  &hmr_mods RCTRL N5  &hmr_mods RALT N6  &hmr_mods RWIN MINUS
+&to 0  &kp BSLH              &kp PIPE             &kp RBKT              &kp RPAR              &kp RBRC     &kp EQUAL  &kp N1              &kp N2              &kp N3             &kp FSLH              &to 0
+                                                  &none                 &trans                &none        &kp COMMA  &kp N0              &kp PERIOD
             >;
         };
 
         nav {
             bindings = <
-        &kp LA(F4)  &kp LC(W)  &kp LA(LS(TAB))  &kp LA(TAB)  &bt BT_CLR        &kp HOME   &mt LC(BACKSPACE) BACKSPACE  &kp UP    &mt LC(DEL) DEL  &kp PG_UP
-        &sk LALT    &sk LWIN   &sk LSHFT        &sk LCTRL    &bt BT_CLR_ALL    &kp END    &kp LEFT                     &kp DOWN  &kp RIGHT        &kp PG_DN
-&trans  &kp LC(Z)   &kp LC(X)  &kp LC(C)        &kp LC(V)    &kp LC(V)         &none      &kp LS(LC(TAB))              &kp TAB   &kp LC(TAB)      &kp FSLH   &trans
-                               &none            &none        &trans            &kp ENTER  &kp BACKSPACE                &kp DEL
+        &kp LA(F4)  &kp LC(W)  &kp LA(LS(TAB))  &kp LA(TAB)  &bt BT_CLR        &kp HOME  &mt LC(BACKSPACE) BACKSPACE  &kp UP    &mt LC(DEL) DEL  &kp PG_UP
+        &sk LALT    &sk LWIN   &sk LSHFT        &sk LCTRL    &bt BT_CLR_ALL    &kp END   &kp LEFT                     &kp DOWN  &kp RIGHT        &kp PG_DN
+&trans  &kp LC(Z)   &kp LC(X)  &kp LC(C)        &kp LC(V)    &kp LC(V)         &none     &kp LS(LC(TAB))              &kp TAB   &kp LC(TAB)      &kp ENTER  &trans
+                               &none            &none        &trans            &none     &trans                       &none
             >;
 
             label = "nav";
@@ -340,10 +340,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp C_STOP  &kp C_REWIND  &kp C_PLAY_PAUSE  &kp C_NEXT    &kp C_BRIGHTNESS_INC    &none      &kp F7              &kp F8              &kp F9             &kp F12
-       &sk LALT    &sk LWIN      &sk LSHFT         &sk LCTRL     &kp C_BRIGHTNESS_DEC    &none      &hml_mods RSHFT F4  &hmr_mods RCTRL F5  &hmr_mods RALT F6  &hmr_mods RWIN F11
-&to 0  &kp C_MUTE  &kp C_MUTE    &kp C_VOL_DN      &kp C_VOL_UP  &bootloader             &none      &kp F1              &kp F2              &kp F3             &kp F10             &to 0
-                                 &trans            &trans        &trans                  &kp ENTER  &kp BACKSPACE       &kp DEL
+       &bt BT_SEL 0           &bt BT_SEL 1           &bt BT_SEL 2          &bt BT_SEL 3            &bt BT_CLR        &none  &kp F7              &kp F8              &kp F9             &kp F12
+       &hml_mods LWIN C_STOP  &hml_mods LALT C_PREV  &hml_mods LCTRL C_PP  &hml_mods LSHFT C_NEXT  &bt BT_CLR_ALL    &none  &hml_mods RSHFT F4  &hmr_mods RCTRL F5  &hmr_mods RALT F6  &hmr_mods RWIN F11
+&to 0  &kp C_MUTE             &kp C_MUTE             &kp C_VOL_DN          &kp C_VOL_UP            &bootloader       &none  &kp F1              &kp F2              &kp F3             &kp F10             &to 0
+                                                     &none                 &trans                  &none             &none  &trans              &none
             >;
         };
 
