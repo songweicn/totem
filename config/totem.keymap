@@ -83,42 +83,41 @@
             hold-trigger-on-release;
         };
 
-            /* 1. 逗号与分号: 单击 , | Shift+单击 ; */
+        /* 1. 逗号与分号: 单击 , | Shift+单击 ; */
 
-            comma_semi: comma_mod_morph {
-                compatible = "zmk,behavior-mod-morph";
-                label = "COMMA_SEMI";
-                #binding-cells = <0>;
-                bindings = <&kp COMMA>, <&kp SEMI>;
+        comma_semi: comma_mod_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMA_SEMI";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp SEMI>;
 
-                mods = <(MOD_LSFT|MOD_RSFT)>;
-            };
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
 
-            /* 2. 句号与冒号: 单击 . | Shift+单击 : */
+        /* 2. 句号与冒号: 单击 . | Shift+单击 : */
 
-            dot_colon: dot_mod_morph {
-                compatible = "zmk,behavior-mod-morph";
-                label = "DOT_COLON";
-                #binding-cells = <0>;
-                bindings = <&kp DOT>, <&kp COLON>;
+        dot_colon: dot_mod_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT_COLON";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp COLON>;
 
-                mods = <(MOD_LSFT|MOD_RSFT)>;
-            };
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
 
-            /* 3. 问号与感叹号: 单击 ? | Shift+单击 ! */
-            /* 注意：问号在基础层通常是带有 Shift 的，这里假设你想要一个一键触发问号的逻辑 */
+        /* 3. 问号与感叹号: 单击 ? | Shift+单击 ! */
+        /* 注意：问号在基础层通常是带有 Shift 的，这里假设你想要一个一键触发问号的逻辑 */
 
-            qmark_excl: qmark_mod_morph {
-                compatible = "zmk,behavior-mod-morph";
-                label = "QMARK_EXCL";
-                #binding-cells = <0>;
-                bindings = <&kp QUESTION>, <&kp EXCL>;
+        qmark_excl: qmark_mod_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "QMARK_EXCL";
+            #binding-cells = <0>;
+            bindings = <&kp QUESTION>, <&kp EXCL>;
 
-                mods = <(MOD_LSFT|MOD_RSFT)>;
-            };
-
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
+};
 
 / {
     combos {
@@ -266,7 +265,7 @@
             label = "fun";
             bindings = <
        &bt BT_SEL 0           &bt BT_SEL 1           &bt BT_SEL 2          &bt BT_SEL 3            &bt BT_CLR        &none  &kp F7              &kp F8              &kp F9             &kp F12
-       &hml_mods LWIN C_STOP  &hml_mods LALT C_PREV  &hml_mods LCTRL C_PP  &hml_mods LSHFT C_NEXT  &bt BT_CLR_ALL    &none  &hml_mods RSHFT F4  &hmr_mods RCTRL F5  &hmr_mods RALT F6  &hmr_mods RWIN F11
+       &hml_mods LWIN C_STOP  &hml_mods LALT C_PREV  &hml_mods LCTRL C_PP  &hml_mods LSHFT C_NEXT  &bt BT_CLR_ALL    &none  &hmr_mods RSHFT F4  &hmr_mods RCTRL F5  &hmr_mods RALT F6  &hmr_mods RWIN F11
 &to 0  &kp C_MUTE             &kp C_MUTE             &kp C_VOL_DN          &kp C_VOL_UP            &bootloader       &none  &kp F1              &kp F2              &kp F3             &kp F10             &to 0
                                                      &none                 &trans                  &none             &none  &trans              &none
             >;
