@@ -6,6 +6,7 @@
 
 / {
     behaviors {
+
         lt_fast: layer_tap_fast {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_FAST";
@@ -16,32 +17,214 @@
             bindings = <&mo>, <&kp>;
         };
 
-        hml: home_row_mod_left {
+        // --- 左手通用 Mods (Ctrl, Alt, Win) ---
+        // 保持 280ms 触发，并带有 prior-idle 防止打字误触
+
+        hml_mods: hml_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "HML";
+            label = "HML_MODS";
             #binding-cells = <2>;
             flavor = "balanced";
-            require-prior-idle-ms = <100>;
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
+            require-prior-idle-ms = <100>; // 特意加长，确保打字模式极其稳定，避免误触
             bindings = <&kp>, <&kp>;
 
             hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 31 35 36 37>;
             hold-trigger-on-release;
         };
 
-        hmr: home_row_mod_right {
+        // --- 左手 Shift 专用 ---
+        // 缩短至 130ms，移除 prior-idle，确保大写字母即按即出
+
+        hml_shift: hml_shift {
             compatible = "zmk,behavior-hold-tap";
-            label = "HMR";
+            label = "HML_SHIFT";
             #binding-cells = <2>;
             flavor = "balanced";
-            require-prior-idle-ms = <100>;
+            tapping-term-ms = <130>; // 极速触发
+            quick-tap-ms = <175>;
+
+            // 移除 require-prior-idle，解决你担心的大写字母迟滞问题
+
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 31 35 36 37>;
+            hold-trigger-on-release;
+        };
+
+        // --- 右手通用 Mods ---
+
+        hmr_mods: hmr_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR_MODS";
+            #binding-cells = <2>;
+            flavor = "balanced";
             tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <100>;
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25 32 33 34>;
+            hold-trigger-on-release;
+        };
+
+        // --- 右手 Shift 专用 ---
+
+        hmr_shift: hmr_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR_SHIFT";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <130>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
 
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25 32 33 34>;
             hold-trigger-on-release;
+        };
+
+        /* 1. 逗号与分号: 单击 , | Shift+单击 ; */
+
+        comma_semi: comma_mod_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMA_SEMI";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp SEMI>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        /* 2. 句号与冒号: 单击 . | Shift+单击 : */
+
+        dot_colon: dot_mod_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT_COLON";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp COLON>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        /* 3. 问号与感叹号: 单击 ? | Shift+单击 ! */
+        /* 注意：问号在基础层通常是带有 Shift 的，这里假设你想要一个一键触发问号的逻辑 */
+
+        qmark_excl: qmark_mod_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "QMARK_EXCL";
+            #binding-cells = <0>;
+            bindings = <&kp QUESTION>, <&kp EXCL>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+        esc {
+            timeout-ms = <50>;
+            key-positions = <1 2>;
+            bindings = <&kp ESC>;
+            layers = <0 1 4 5 5>;
+        };
+
+        pgup {
+            bindings = <&kp PG_UP>;
+            key-positions = <8 9>;
+            layers = <0 1 5 5>;
+        };
+
+        pgdn {
+            bindings = <&kp PAGE_DOWN>;
+            key-positions = <18 19>;
+            layers = <0 1 5 5>;
+        };
+
+        enter {
+            bindings = <&kp ENTER>;
+            key-positions = <30 29>;
+        };
+
+        home {
+            bindings = <&kp HOME>;
+            key-positions = <6 7>;
+        };
+
+        end {
+            bindings = <&kp END>;
+            key-positions = <7 8>;
+        };
+
+        up {
+            bindings = <&kp UP>;
+            key-positions = <7 17>;
+            layers = <0 1 5 5>;
+        };
+
+        down {
+            bindings = <&kp DOWN>;
+            key-positions = <17 28>;
+            layers = <0 1 5 5>;
+        };
+
+        left {
+            bindings = <&kp LEFT>;
+            key-positions = <17 16>;
+            layers = <0 1 5 5>;
+        };
+
+        right {
+            bindings = <&kp RIGHT>;
+            key-positions = <17 18>;
+            layers = <0 1 5 5>;
+        };
+
+        copy {
+            bindings = <&kp LC(C)>;
+            key-positions = <22 23>;
+            layers = <0 1 4 5 5>;
+        };
+
+        paste {
+            bindings = <&kp LC(V)>;
+            key-positions = <23 24>;
+            layers = <0 1 4 5 5>;
+        };
+
+        cut {
+            bindings = <&kp LC(X)>;
+            key-positions = <22 24>;
+            layers = <0 1 4 5 5>;
+        };
+
+        mouse {
+            bindings = <&tog 4>;
+            key-positions = <15 19>;
+        };
+
+        numpad {
+            bindings = <&tog 1>;
+            key-positions = <15 16>;
+        };
+
+        game {
+            bindings = <&tog 5>;
+            key-positions = <14 15>;
+        };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <11 12>;
+            layers = <0 4 1 5 5>;
+        };
+
+        undo {
+            bindings = <&kp LC(Z)>;
+            key-positions = <21 22>;
+            layers = <0 1 4 5 3>;
         };
     };
 };
@@ -138,7 +321,7 @@
             label = "base";
             bindings = <
        &kp Q            &kp W            &kp F                &kp P         &kp B        &kp J        &kp L            &kp U                 &kp Y             &kp SINGLE_QUOTE
-       &hml LEFT_WIN A  &hml LEFT_ALT R  &hml LEFT_CONTROL S  &hml LSHFT T  &kp G        &kp M        &hmr RSHFT N     &hmr RIGHT_CONTROL E  &hmr RIGHT_ALT I  &hmr RIGHT_GUI O
+       &hml_mods LEFT_WIN A  &hml_mods LEFT_ALT R  &hml_mods LEFT_CONTROL S  &hml_shift LSHFT T  &kp G        &kp M        &hmr_shift RSHFT N     &hmr_mods RIGHT_CONTROL E  &hmr_mods RIGHT_ALT I  &hmr_mods RIGHT_GUI O
 &to 0  &kp Z            &kp X            &kp C                &kp D         &kp V        &kp K        &kp H            &kp COMMA             &kp PERIOD        &kp SLASH         &to 0
                                          &lt 6 ESC            &lt_fast 4 SPACE   &lt 5 TAB    &lt 2 ENTER  &lt 1 BACKSPACE  &lt 3 DEL
             >;
