@@ -6,6 +6,16 @@
 
 / {
     behaviors {
+        lt_fast: layer_tap_fast {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_FAST";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";  // 优先判定为按住（切层）
+            tapping-term-ms = <200>;    // 缩短判定时间，让切层更灵敏
+            quick-tap-ms = <0>;         // 禁用快速连发空格，防止选词干扰
+            bindings = <&mo>, <&kp>;
+        };
+
         hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
             label = "HML";
@@ -130,7 +140,7 @@
        &kp Q            &kp W            &kp F                &kp P         &kp B        &kp J        &kp L            &kp U                 &kp Y             &kp SINGLE_QUOTE
        &hml LEFT_WIN A  &hml LEFT_ALT R  &hml LEFT_CONTROL S  &hml LSHFT T  &kp G        &kp M        &hmr RSHFT N     &hmr RIGHT_CONTROL E  &hmr RIGHT_ALT I  &hmr RIGHT_GUI O
 &to 0  &kp Z            &kp X            &kp C                &kp D         &kp V        &kp K        &kp H            &kp COMMA             &kp PERIOD        &kp SLASH         &to 0
-                                         &lt 6 ESC            &lt 4 SPACE   &lt 5 TAB    &lt 2 ENTER  &lt 1 BACKSPACE  &lt 3 DEL
+                                         &lt 6 ESC            &lt_fast 4 SPACE   &lt 5 TAB    &lt 2 ENTER  &lt 1 BACKSPACE  &lt 3 DEL
             >;
         };
 
