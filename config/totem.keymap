@@ -265,14 +265,13 @@
     keymap {
         compatible = "zmk,keymap";
 
-
         base {
             label = "base";
             bindings = <
            &kp Q             &kp W             &kp F              &kp P               &kp B        &kp J      &kp L               &kp U              &kp Y             &kp SINGLE_QUOTE
            &hml_mods LWIN A  &hml_mods LALT R  &hml_mods LCTRL S  &hml_shift LSHFT T  &kp G        &kp M      &hmr_shift RSHFT N  &hmr_mods RCTRL E  &hmr_mods RALT I  &hmr_mods RWIN O
 &sk LCTRL  &kp Z             &kp X             &kp C              &kp D               &kp V        &kp K      &kp H               &comma_semi        &dot_colon        &qmark_excl       &to 1
-                                               &caps_ext 3 0      &lt 1 SPACE         &sk LSHFT    &kp ENTER  &lt 2 BACKSPACE     &kp DEL
+                                               &caps_word         &lt 1 SPACE         &sk LSHFT    &kp ENTER  &lt 2 BACKSPACE     &kp DEL
             >;
         };
 
@@ -290,7 +289,7 @@
             bindings = <
         &kp LA(F4)  &kp LC(W)  &kp LA(LS(TAB))  &kp LA(TAB)  &bt BT_CLR        &kp HOME  &mt LC(BACKSPACE) BACKSPACE  &kp UP    &mt LC(DEL) DEL  &kp PG_UP
         &sk LWIN    &sk LALT   &sk LCTRL        &sk LSHFT    &bt BT_CLR_ALL    &kp END   &kp LEFT                     &kp DOWN  &kp RIGHT        &kp PG_DN
-&trans  &kp LC(Z)   &kp LC(X)  &kp LC(C)        &kp LC(V)    &kp LC(V)         &none     &kp LS(LC(TAB))              &kp TAB   &kp LC(TAB)      &kp FSLH  &trans
+&trans  &kp LC(Z)   &kp LC(X)  &kp LC(C)        &kp LC(V)    &kp LC(V)         &none     &kp LS(LC(TAB))              &kp TAB   &kp LC(TAB)      &kp FSLH   &trans
                                &trans           &trans       &trans            &none     &trans                       &none
             >;
 
