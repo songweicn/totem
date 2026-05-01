@@ -6,7 +6,6 @@
 
 / {
     behaviors {
-
         lt_fast: layer_tap_fast {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_FAST";
@@ -150,12 +149,12 @@
 
         home {
             bindings = <&kp HOME>;
-            key-positions = <6 7>;
+            key-positions = <6 5>;
         };
 
         end {
             bindings = <&kp END>;
-            key-positions = <7 8>;
+            key-positions = <15 16>;
         };
 
         up {
@@ -201,7 +200,7 @@
         };
 
         mouse {
-            bindings = <&tog 4>;
+            bindings = <&tog 5>;
             key-positions = <15 19>;
         };
 
@@ -211,7 +210,7 @@
         };
 
         game {
-            bindings = <&tog 5>;
+            bindings = <&tog 7>;
             key-positions = <14 15>;
         };
 
@@ -225,6 +224,16 @@
             bindings = <&kp LC(Z)>;
             key-positions = <21 22>;
             layers = <0 1 4 5 3>;
+        };
+
+        backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <6 7>;
+        };
+
+        del {
+            bindings = <&kp DEL>;
+            key-positions = <7 8>;
         };
     };
 };
@@ -320,10 +329,10 @@
         base {
             label = "base";
             bindings = <
-       &kp Q            &kp W            &kp F                &kp P         &kp B        &kp J        &kp L            &kp U                 &kp Y             &kp SINGLE_QUOTE
-       &hml_mods LEFT_WIN A  &hml_mods LEFT_ALT R  &hml_mods LEFT_CONTROL S  &hml_shift LSHFT T  &kp G        &kp M        &hmr_shift RSHFT N     &hmr_mods RIGHT_CONTROL E  &hmr_mods RIGHT_ALT I  &hmr_mods RIGHT_GUI O
-&to 0  &kp Z            &kp X            &kp C                &kp D         &kp V        &kp K        &kp H            &kp COMMA             &kp PERIOD        &kp SLASH         &to 0
-                                         &lt 6 ESC            &lt_fast 4 SPACE   &lt 5 TAB    &lt 2 ENTER  &lt 1 BACKSPACE  &lt 3 DEL
+       &kp Q                 &kp W                 &kp F                     &kp P               &kp B        &kp J        &kp L               &kp U                      &kp Y                  &kp SINGLE_QUOTE
+       &hml_mods LEFT_WIN A  &hml_mods LEFT_ALT R  &hml_mods LEFT_CONTROL S  &hml_shift LSHFT T  &kp G        &kp M        &hmr_shift RSHFT N  &hmr_mods RIGHT_CONTROL E  &hmr_mods RIGHT_ALT I  &hmr_mods RIGHT_GUI O
+&to 0  &kp Z                 &kp X                 &kp C                     &kp D               &kp V        &kp K        &kp H               &kp COMMA                  &kp PERIOD             &kp SLASH              &to 0
+                                                   &lt 6 ESC                 &lt_fast 4 SPACE    &lt 5 TAB    &lt 2 ENTER  &lt 1 BACKSPACE     &lt 3 DEL
             >;
         };
 
