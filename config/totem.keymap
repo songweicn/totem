@@ -84,6 +84,63 @@
         };
 
         // 定义一个名为 caps_ext 的行为
+
+        caps_ext: caps_word_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "CAPS_WORD_LAYER_TAP";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;    // 长按 200ms 进入 Ext 层
+            quick-tap-ms = <150>;       // 快速连点则输出两次 Caps Word（虽然通常没必要）
+            flavor = "hold-preferred";  // 倾向于长按触发层，确保切层果断
+            bindings = <&mo>, <&caps_word>;
+
+            // 第一个参数是层(Ext)，第二个是单击功能
+            /* 1. 逗号与分号: 单击 , | Shift+单击 ; */
+
+            comma_semi: comma_mod_morph {
+                compatible = "zmk,behavior-mod-morph";
+                label = "COMMA_SEMI";
+                #binding-cells = <0>;
+                bindings = <&kp COMMA>, <&kp SEMI>;
+
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+            };
+
+            /* 2. 句号与冒号: 单击 . | Shift+单击 : */
+
+            dot_colon: dot_mod_morph {
+                compatible = "zmk,behavior-mod-morph";
+                label = "DOT_COLON";
+                #binding-cells = <0>;
+                bindings = <&kp DOT>, <&kp COLON>;
+
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+            };
+
+            /* 3. 问号与感叹号: 单击 ? | Shift+单击 ! */
+            /* 注意：问号在基础层通常是带有 Shift 的，这里假设你想要一个一键触发问号的逻辑 */
+
+            qmark_excl: qmark_mod_morph {
+                compatible = "zmk,behavior-mod-morph";
+                label = "QMARK_EXCL";
+                #binding-cells = <0>;
+                bindings = <&kp QUESTION>, <&kp EXCL>;
+
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+            };
+
+            shft_layer: shft_layer {
+                compatible = "zmk,behavior-hold-tap";
+                label = "SHFT_LAYER";
+                #binding-cells = <2>;
+                tapping-term-ms = <200>;    // 长按超过 200ms 识别为切层
+                quick-tap-ms = <150>;       // 快速双击则不识别为长按（防止连续输入时的意外切层）
+                flavor = "hold-preferred";  // 倾向于长按触发，确保切层反应迅速
+                bindings = <&mo>, <&sk>;
+
+                // 第一个是长按绑定的行为 (Layer)，第二个是单击绑定的行为 (Sticky Key)
+            };
+        };
     };
 
     keymap {
