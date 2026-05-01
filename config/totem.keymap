@@ -83,41 +83,30 @@
             hold-trigger-on-release;
         };
 
-            // 第一个参数是层(Ext)，第二个是单击功能
-            /* 1. 逗号与分号: 单击 , | Shift+单击 ; */
-
-            comma_semi: comma_mod_morph {
-                compatible = "zmk,behavior-mod-morph";
-                label = "COMMA_SEMI";
-                #binding-cells = <0>;
-                bindings = <&kp COMMA>, <&kp SEMI>;
-
-                mods = <(MOD_LSFT|MOD_RSFT)>;
-            };
-
-            /* 2. 句号与冒号: 单击 . | Shift+单击 : */
-
-            dot_colon: dot_mod_morph {
-                compatible = "zmk,behavior-mod-morph";
-                label = "DOT_COLON";
-                #binding-cells = <0>;
-                bindings = <&kp DOT>, <&kp COLON>;
-
-                mods = <(MOD_LSFT|MOD_RSFT)>;
-            };
-
-            /* 3. 问号与感叹号: 单击 ? | Shift+单击 ! */
-            /* 注意：问号在基础层通常是带有 Shift 的，这里假设你想要一个一键触发问号的逻辑 */
-
-            qmark_excl: qmark_mod_morph {
-                compatible = "zmk,behavior-mod-morph";
-                label = "QMARK_EXCL";
-                #binding-cells = <0>;
-                bindings = <&kp QUESTION>, <&kp EXCL>;
-
-                mods = <(MOD_LSFT|MOD_RSFT)>;
-            };
+        comma_semi: comma_semi {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMA_SEMI";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp SEMI>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        dot_colon: dot_colon {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT_COLON";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp COLON>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        qmark_excl: qmark_mod_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "QMARK_EXCL";
+            #binding-cells = <0>;
+            bindings = <&kp QUESTION>, <&kp EXCL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+      };
     };
 
     keymap {
