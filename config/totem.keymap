@@ -243,10 +243,10 @@
         num {
             label = "num";
             bindings = <
-       &kp TILDE             &kp AT               &kp POUND             &kp DLLR              &kp PRCNT    &kp GRAVE  &kp N7              &kp N8              &kp N9             &kp PLUS
-       &hml_mods LWIN CARET  &hml_mods LALT AMPS  &hml_mods LCTRL LBKT  &hml_mods LSHFT LPAR  &kp LBRC     &kp STAR   &hmr_mods RSHFT N4  &hmr_mods RCTRL N5  &hmr_mods RALT N6  &hmr_mods RWIN MINUS
-&to 0  &kp BSLH              &kp PIPE             &kp RBKT              &kp RPAR              &kp RBRC     &kp EQUAL  &kp N1              &kp N2              &kp N3             &kp FSLH              &to 0
-                                                  &none                 &trans                &none        &kp COMMA  &kp N0              &kp PERIOD
+       &kp TILDE             &kp AT               &kp POUND             &kp DLLR              &kp PRCNT    &kp GRAVE    &kp N7              &kp N8              &kp N9             &kp PLUS
+       &hml_mods LWIN CARET  &hml_mods LALT AMPS  &hml_mods LCTRL LBKT  &hml_mods LSHFT LPAR  &kp LBRC     &kp STAR     &hmr_mods RSHFT N4  &hmr_mods RCTRL N5  &hmr_mods RALT N6  &hmr_mods RWIN MINUS
+&to 0  &kp BSLH              &kp PIPE             &kp RBKT              &kp RPAR              &kp RBRC     &kp EQUAL    &kp N1              &kp N2              &kp N3             &kp FSLH              &to 0
+                                                  &none                 &trans                &none        &comma_semi  &kp N0              &dot_colon
             >;
         };
 
@@ -254,7 +254,7 @@
             bindings = <
         &kp LA(F4)  &kp LC(W)  &kp LA(LS(TAB))  &kp LA(TAB)  &bt BT_CLR        &kp HOME  &mt LC(BACKSPACE) BACKSPACE  &kp UP    &mt LC(DEL) DEL  &kp PG_UP
         &sk LWIN    &sk LALT   &sk LCTRL        &sk LSHFT    &bt BT_CLR_ALL    &kp END   &kp LEFT                     &kp DOWN  &kp RIGHT        &kp PG_DN
-&trans  &kp LC(Z)   &kp LC(X)  &kp LC(C)        &kp LC(V)    &kp LC(V)         &none     &kp LS(LC(TAB))              &kp TAB   &kp LC(TAB)      &kp FSLH   &trans
+&trans  &kp LC(Z)   &kp LC(X)  &kp LC(C)        &kp LC(V)    &kp LC(V)         &kp ESC   &kp LS(LC(TAB))              &kp TAB   &kp LC(TAB)      &kp FSLH   &trans
                                &trans           &trans       &trans            &none     &trans                       &none
             >;
 
