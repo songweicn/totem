@@ -123,13 +123,6 @@
     combos {
         compatible = "zmk,combos";
 
-        esc {
-            timeout-ms = <50>;
-            key-positions = <1 2>;
-            bindings = <&kp ESC>;
-            layers = <0 1 4 5 5>;
-        };
-
         pgup {
             bindings = <&kp PG_UP>;
             key-positions = <8 9>;
@@ -142,19 +135,14 @@
             layers = <0 1 5 5>;
         };
 
-        enter {
-            bindings = <&kp ENTER>;
-            key-positions = <30 29>;
-        };
-
         home {
             bindings = <&kp HOME>;
-            key-positions = <6 7>;
+            key-positions = <6 5>;
         };
 
         end {
             bindings = <&kp END>;
-            key-positions = <7 8>;
+            key-positions = <15 16>;
         };
 
         up {
@@ -214,8 +202,8 @@
             key-positions = <14 15>;
         };
 
-        tab {
-            bindings = <&kp TAB>;
+        plus {
+            bindings = <&kp PLUS>;
             key-positions = <11 12>;
             layers = <0 4 1 5 5>;
         };
@@ -224,6 +212,31 @@
             bindings = <&kp LC(Z)>;
             key-positions = <21 22>;
             layers = <0 1 4 5 3>;
+        };
+
+        backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <6 7>;
+        };
+
+        del {
+            bindings = <&kp DEL>;
+            key-positions = <7 8>;
+        };
+
+        minus {
+            bindings = <&kp MINUS>;
+            key-positions = <12 13>;
+        };
+
+        times {
+            bindings = <&kp STAR>;
+            key-positions = <1 2>;
+        };
+
+        devide {
+            bindings = <&kp SLASH>;
+            key-positions = <3 2>;
         };
     };
 };
