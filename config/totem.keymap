@@ -133,13 +133,6 @@
     combos {
         compatible = "zmk,combos";
 
-        esc {
-            timeout-ms = <50>;
-            key-positions = <1 2>;
-            bindings = <&kp ESC>;
-            layers = <0 1 4 5 5>;
-        };
-
         pgup {
             bindings = <&kp PG_UP>;
             key-positions = <8 9>;
@@ -224,12 +217,6 @@
             key-positions = <14 15>;
         };
 
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <11 12>;
-            layers = <0 4 1 5 5>;
-        };
-
         undo {
             bindings = <&kp LC(Z)>;
             key-positions = <21 22>;
@@ -245,6 +232,11 @@
             bindings = <&kp DEL>;
             key-positions = <7 8>;
         };
+
+        capsw {
+            bindings = <&caps_word>;
+            key-positions = <12 13>;
+        };
     };
 
     keymap {
@@ -253,10 +245,10 @@
         base {
             label = "base";
             bindings = <
-           &kp Q             &kp W             &kp F              &kp P               &kp B        &kp J      &kp L                 &kp U              &kp Y             &kp SINGLE_QUOTE
-           &hml_mods LWIN A  &hml_mods LALT R  &hml_mods LCTRL S  &hml_shift LSHFT T  &kp G        &kp M      &hmr_shift RSHFT N    &hmr_mods RCTRL E  &hmr_mods RALT I  &hmr_mods RWIN O
-&sk LCTRL  &kp Z             &kp X             &kp C              &kp D               &kp V        &kp K      &kp H                 &comma_semi        &dot_colon        &qmark_excl       &to 1
-                                               &caps_word         &lt_fast 1 SPACE    &sk LSHFT    &kp ENTER  &lt_fast 2 BACKSPACE  &kp DEL
+           &kp Q             &kp W             &kp F              &kp P               &kp B      &kp J      &kp L                 &kp U              &kp Y             &kp SINGLE_QUOTE
+           &hml_mods LWIN A  &hml_mods LALT R  &hml_mods LCTRL S  &hml_shift LSHFT T  &kp G      &kp M      &hmr_shift RSHFT N    &hmr_mods RCTRL E  &hmr_mods RALT I  &hmr_mods RWIN O
+&sk LCTRL  &kp Z             &kp X             &kp C              &kp D               &kp V      &kp K      &kp H                 &comma_semi        &dot_colon        &qmark_excl       &to 1
+                                               &kp ESC            &lt_fast 1 SPACE    &kp TAB    &kp ENTER  &lt_fast 2 BACKSPACE  &kp DEL
             >;
         };
 
