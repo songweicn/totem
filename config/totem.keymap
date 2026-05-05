@@ -51,7 +51,7 @@
             label = "HML_SHIFT";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <130>; // 极速触发
+            tapping-term-ms = <150>; // 极速触发
             quick-tap-ms = <175>;
 
             // 移除 require-prior-idle，解决你担心的大写字母迟滞问题
@@ -85,7 +85,7 @@
             label = "HMR_SHIFT";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <130>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
 
