@@ -245,10 +245,10 @@
         base {
             label = "base";
             bindings = <
-           &kp Q             &kp W             &kp F              &kp P               &kp B      &kp J      &kp L                 &kp U              &kp Y             &kp SINGLE_QUOTE
-           &hml_mods LWIN A  &hml_mods LALT R  &hml_mods LCTRL S  &hml_shift LSHFT T  &kp G      &kp M      &hmr_shift RSHFT N    &hmr_mods RCTRL E  &hmr_mods RALT I  &hmr_mods RWIN O
-&sk LCTRL  &kp Z             &kp X             &kp C              &kp D               &kp V      &kp K      &kp H                 &comma_semi        &dot_colon        &qmark_excl       &to 1
-                                               &kp ESC            &lt_fast 1 SPACE    &kp TAB    &kp ENTER  &lt_fast 2 BACKSPACE  &kp DEL
+           &kp Q             &kp W             &kp F              &kp P               &kp B             &kp J      &kp L                 &kp U              &kp Y             &kp SINGLE_QUOTE
+           &hml_mods LWIN A  &hml_mods LALT R  &hml_mods LCTRL S  &hml_shift LSHFT T  &kp G             &kp M      &hmr_shift RSHFT N    &hmr_mods RCTRL E  &hmr_mods RALT I  &hmr_mods RWIN O
+&sk LCTRL  &kp Z             &kp X             &kp C              &kp D               &kp V             &kp K      &kp H                 &comma_semi        &dot_colon        &qmark_excl       &to 1
+                                               &kp ESC            &lt_fast 1 SPACE    &lt_fast 3 TAB    &kp ENTER  &lt_fast 2 BACKSPACE  &kp DEL
             >;
         };
 
@@ -316,12 +316,5 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        fun {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
